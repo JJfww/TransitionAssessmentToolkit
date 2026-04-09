@@ -348,22 +348,6 @@
   {
     "domain": "vocational-employment",
     "group": "Student Self-Assessments",
-    "title": "Holland Code Party Groups",
-    "description": "Small-group activity to explore work-interest groupings.",
-    "url": "/files/Holland_Code.pdf",
-    "kind": "file"
-  },
-  {
-    "domain": "vocational-employment",
-    "group": "Student Self-Assessments",
-    "title": "Holland Code Quiz",
-    "description": "Quiz that classifies jobs into categories, interest clusters, or work personality environments.",
-    "url": "https://www.roguecc.edu/Counseling/HollandCodes/test.asp",
-    "kind": "external"
-  },
-  {
-    "domain": "vocational-employment",
-    "group": "Student Self-Assessments",
     "title": "T-Folio Work Skills Assessment",
     "description": "Online work-maturity and work-skills self-assessment.",
     "url": "https://www.cctstfolio.com/#/unit-1/lesson-6/work-maturity-skills",

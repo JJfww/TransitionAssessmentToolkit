@@ -15,9 +15,9 @@
         <nav class="site-nav">
           <a href="{{ "/" | relURL }}">Home</a>
           <a href="{{ "/about/" | relURL }}">About</a>
-          <a href="{{ "/#assessment-domains" | relURL }}">Assessments</a>
-          <a href="{{ "/#support-paths" | relURL }}">Support Paths</a>
-          <a href="{{ "/#additional-resources" | relURL }}">Resources</a>
+          <a href='{{ printf "%s#assessment-domains" ("/" | relURL) }}'>Assessments</a>
+          <a href='{{ printf "%s#support-paths" ("/" | relURL) }}'>Support Paths</a>
+          <a href='{{ printf "%s#additional-resources" ("/" | relURL) }}'>Resources</a>
         </nav>
       </header>
       <main>
