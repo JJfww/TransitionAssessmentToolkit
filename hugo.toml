@@ -4,8 +4,8 @@ title = "Transition Assessment Toolkit"
 disableKinds = ["taxonomy", "term", "section"]
 
 [params]
-  description = "A data-driven Hugo prototype for organizing transition assessments by domain."
-  intro = "This parallel Hugo build is a safer, easier-to-update replacement under development alongside the existing mdBook site."
+  description = "Transition assessments, support resources, and planning tools organized by domain and student need."
+  intro = "A curated toolkit of transition assessments, support resources, and planning tools organized to help teams match the right resource to the right student and purpose."
 
 [markup]
   [markup.goldmark]
