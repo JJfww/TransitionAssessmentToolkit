@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <section class="hero compact">
+    <p class="eyebrow">About</p>
+    <h1>{{ .Title }}</h1>
+    <p class="lede">{{ .Params.description }}</p>
+  </section>
+
+  <article class="about-body">
+    {{ .Content }}
+  </article>
+{{ end }}

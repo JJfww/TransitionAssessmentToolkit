@@ -1,0 +1,13 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "Transition Assessment Toolkit"
+disableKinds = ["taxonomy", "term", "section"]
+
+[params]
+  description = "A data-driven Hugo prototype for organizing transition assessments by domain."
+  intro = "This parallel Hugo build is a safer, easier-to-update replacement under development alongside the existing mdBook site."
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

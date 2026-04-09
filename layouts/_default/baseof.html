@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    {{ $styles := resources.Get "css/site.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="{{ "/" | relURL }}">Transition Assessment Toolkit</a>
+        <nav class="site-nav">
+          <a href="{{ "/" | relURL }}">Home</a>
+          <a href="{{ "/about/" | relURL }}">About</a>
+          <a href="{{ "/#assessment-domains" | relURL }}">Assessments</a>
+          <a href="{{ "/#support-paths" | relURL }}">Support Paths</a>
+          <a href="{{ "/#additional-resources" | relURL }}">Resources</a>
+        </nav>
+      </header>
+      <main>
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+  </body>
+</html>

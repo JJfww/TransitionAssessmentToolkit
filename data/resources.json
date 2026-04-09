@@ -1,0 +1,791 @@
+[
+  {
+    "domain": "education",
+    "group": "College and Test Preparation",
+    "title": "Free ACT Prep",
+    "description": "Official ACT practice and test-prep resources.",
+    "url": "https://www.act.org/content/act/en/products-and-services/the-act/test-preparation/free-act-test-prep.html",
+    "kind": "external"
+  },
+  {
+    "domain": "education",
+    "group": "College and Test Preparation",
+    "title": "Free SAT Prep",
+    "description": "Official SAT practice resources from College Board.",
+    "url": "https://satsuite.collegeboard.org/psat-nmsqt/preparing/practice-tests",
+    "kind": "external"
+  },
+  {
+    "domain": "education",
+    "group": "College and Test Preparation",
+    "title": "SAT Practice Tests | Khan Academy",
+    "description": "Free full-length SAT practice tests and prep materials.",
+    "url": "https://www.khanacademy.org/test-prep/sat/full-length-sat-1",
+    "kind": "external"
+  },
+  {
+    "domain": "education",
+    "group": "Postsecondary Planning",
+    "title": "Postsecondary Education and Experience Assessment",
+    "description": "Assessment for students considering transition and postsecondary programs for students with intellectual disabilities.",
+    "url": "https://andrealsuk.wixsite.com/peaeassessment",
+    "kind": "external",
+    "tags": ["high-support-needs"]
+  },
+  {
+    "domain": "education",
+    "group": "Academic Reflection",
+    "title": "Study Skills Assessment Questionnaire",
+    "description": "Student reflection questionnaire covering academic habits and readiness.",
+    "url": "/files/Study_Skills_Assessment.pdf",
+    "kind": "file"
+  },
+  {
+    "domain": "independent-living-community-access",
+    "group": "Independent Living Assessments",
+    "title": "Adolescent Autonomy Checklist",
+    "description": "Comprehensive home-skills checklist that families can share with teachers to help develop independent living goals.",
+    "url": "/files/AdolescentAutonomyChecklist.pdf",
+    "kind": "file"
+  },
+  {
+    "domain": "independent-living-community-access",
+    "group": "Independent Living Assessments",
+    "title": "Community Based Skills Assessment",
+    "description": "Criterion- and interview-based assessment of knowledge, skills, and social communication abilities across age ranges.",
+    "url": "/files/CommBasedSkillsAssess.pdf",
+    "kind": "file"
+  },
+  {
+    "domain": "independent-living-community-access",
+    "group": "Independent Living Assessments",
+    "title": "Executive Functioning Skills",
+    "description": "Assessment with scoring guide, explanations, and goal-setting space across executive-function domains.",
+    "url": "/files/Life-Skills-Advocate-Executive-Functioning-Assessment-Fillable.pdf",
+    "kind": "file"
+  },
+  {
+    "domain": "independent-living-community-access",
+    "group": "Independent Living Assessments",
+    "title": "Evaluate Your Reputation",
+    "description": "Simple self-evaluation with a 0-1-2 scale and follow-up goal-setting steps.",
+    "url": "/files/Evaluate_Your_Reputation.pdf",
+    "kind": "file"
+  },
+  {
+    "domain": "independent-living-community-access",
+    "group": "Assessments for Students with High Support Needs",
+    "title": "Independent Living Skills (ILS) Checklist",
+    "description": "Comprehensive checklist covering independent living skills across multiple grade levels for students with significant support needs.",
+    "url": "/files/ILS_Checklist_2018.pdf",
+    "kind": "file",
+    "tags": ["high-support-needs"]
+  },
+  {
+    "domain": "independent-living-community-access",
+    "group": "Assessments for Students with High Support Needs",
+    "title": "Life Skills Checklist",
+    "description": "Broad life-skills checklist often useful for students with more significant support needs.",
+    "url": "/files/Life_Skills_Checklist.pdf",
+    "kind": "file",
+    "tags": ["high-support-needs"]
+  },
+  {
+    "domain": "independent-living-community-access",
+    "group": "Assessments for Students with High Support Needs",
+    "title": "Personal Preferences Indicators",
+    "description": "Planning guide for gathering preference information through informal conversations with the student or trusted supporters.",
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "English",
+        "url": "/files/Personal_Preference_Indicators.pdf"
+      },
+      {
+        "label": "Spanish",
+        "url": "/files/Personal_Preference_Indicators_Spanish.pdf"
+      }
+    ],
+    "tags": ["high-support-needs", "visual-supports"]
+  },
+  {
+    "domain": "parent-surveys",
+    "group": "Parent Surveys",
+    "title": "Updated Parent Transition Survey",
+    "description": "Fillable PDF version that can be downloaded and shared electronically.",
+    "url": "/files/ParentTransitionSurvey-Form-fill.pdf",
+    "kind": "file",
+    "tags": ["high-support-needs"]
+  },
+  {
+    "domain": "parent-surveys",
+    "group": "Parent Surveys",
+    "title": "Original Parent Transition Survey",
+    "description": "Survey that helps capture parent voice and can be especially useful alongside student interviews and assessments.",
+    "url": "/files/parent-transition-survey.pdf",
+    "kind": "file",
+    "tags": ["high-support-needs"]
+  },
+  {
+    "domain": "parent-surveys",
+    "group": "Family Cultural Wealth Assessment",
+    "title": "Family Cultural Wealth Assessment",
+    "description": "Interview protocols focused on identifying family and community strengths, assets, and priorities for future planning.",
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "Family Version",
+        "url": "/files/FCA_Profile-Family.pdf"
+      },
+      {
+        "label": "Student Version",
+        "url": "/files/FCA_Profile-Student.pdf"
+      },
+      {
+        "label": "Teacher Version",
+        "url": "/files/FCA_Profile-Teacher.pdf"
+      }
+    ]
+  },
+  {
+    "domain": "self-determination",
+    "group": "Self-Determination Scales",
+    "title": "AIR Self-Determination Scale",
+    "description": "Guide plus student, parent, and educator forms for the AIR Self-Determination Scale.",
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "User Guide",
+        "url": "/files/AIR_User_Guide.pdf"
+      },
+      {
+        "label": "Student Form",
+        "url": "/files/AIR_Student_Fillable.pdf"
+      },
+      {
+        "label": "Parent Form",
+        "url": "/files/AIR_Parent_Fillable.pdf"
+      },
+      {
+        "label": "Educator Form",
+        "url": "/files/AIR_Educator_Fillable.pdf"
+      }
+    ]
+  },
+  {
+    "domain": "self-determination",
+    "group": "Self-Determination Scales",
+    "title": "Arc Self-Determination Scale",
+    "description": "Procedural guidelines and formal scale materials for the Arc Self-Determination Scale.",
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "Procedural Guidelines",
+        "url": "/files/arc-prodecure.pdf"
+      },
+      {
+        "label": "Scale",
+        "url": "/files/arc-sd-scale-rev2013.pdf"
+      }
+    ]
+  },
+  {
+    "domain": "self-determination",
+    "group": "Self-Determination Scales",
+    "title": "I'm Determined One-Pager",
+    "description": "One-pager implementation guide and blank form from I'm Determined.",
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "Implementation Guide",
+        "url": "/files/One-Pager_Guide_IMD.pdf"
+      },
+      {
+        "label": "Blank Form",
+        "url": "/files/One-Pager_Tool_IMD.pdf"
+      },
+      {
+        "label": "Website",
+        "url": "https://imdetermined.org/tool/one-pager/"
+      }
+    ]
+  },
+  {
+    "domain": "self-determination",
+    "group": "Dream Planning",
+    "title": "Dream Plan Interview",
+    "description": "Guided interview to help students identify future goals and priorities.",
+    "url": "/files/Dream_Plan_Interview.pdf",
+    "kind": "file"
+  },
+  {
+    "domain": "self-determination",
+    "group": "Dream Planning",
+    "title": "Brief Dream Plan",
+    "description": "Fillable planning form for documenting dreams, preferences, and support needs.",
+    "url": "/files/Brief_Dream_Plan_PDF_Fillable.pdf",
+    "kind": "file"
+  },
+  {
+    "domain": "self-determination",
+    "group": "Self-Reflection and Planning",
+    "title": "T-Folio Strengths Assessment",
+    "description": "Online self-reflection activity focused on identifying personal strengths.",
+    "url": "https://www.cctstfolio.com/#/unit-1/lesson-1/strengths-assessment",
+    "kind": "external"
+  },
+  {
+    "domain": "self-determination",
+    "group": "Self-Reflection and Planning",
+    "title": "T-Folio Preferences Assessment",
+    "description": "Online assessment focused on identifying student preferences.",
+    "url": "https://www.cctstfolio.com/#/unit-1/lesson-2/preferences-assessment",
+    "kind": "external",
+    "tags": ["visual-supports"]
+  },
+  {
+    "domain": "self-determination",
+    "group": "Self-Reflection and Planning",
+    "title": "T-Folio Needs Assessment",
+    "description": "Online assessment focused on identifying support needs and priorities.",
+    "url": "https://www.cctstfolio.com/#/unit-1/lesson-4/needs-assessment",
+    "kind": "external",
+    "tags": ["high-support-needs"]
+  },
+  {
+    "domain": "self-determination",
+    "group": "Choice Boards and Visual Supports",
+    "title": "Choice Boards and Visual Supports",
+    "description": "Visual supports for discussing dreams, fears, interests, needs, and preferences.",
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "Dreams",
+        "url": "/files/Dreams_Choice_Board.pdf"
+      },
+      {
+        "label": "Fears",
+        "url": "/files/Fears_Choice_Board.pdf"
+      },
+      {
+        "label": "Interests",
+        "url": "/files/Interests_Choice_Board.pdf"
+      },
+      {
+        "label": "Needs",
+        "url": "/files/Needs_Choice_Board.pdf"
+      },
+      {
+        "label": "Preferences",
+        "url": "/files/Preferences_Choice_Board.pdf"
+      }
+    ],
+    "tags": ["visual-supports"]
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Employment Interest Assessments",
+    "title": "My Next Move (O*NET Interest Profiler)",
+    "description": "Online interest profile that generates a score report.",
+    "url": "https://www.mynextmove.org/explore/ip",
+    "kind": "external"
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Employment Interest Assessments",
+    "title": "O*NET Interest Profiler (Short Form)",
+    "description": "Printable short-form version for student completion.",
+    "url": "/files/onet-profiler-short.pdf",
+    "kind": "file"
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Employment Interest Assessments",
+    "title": "Career One Stop Skills Matcher",
+    "description": "Department of Labor skills matcher that helps students self-evaluate skills and knowledge.",
+    "url": "https://www.careeronestop.org/Toolkit/Skills/skills-matcher-questions.aspx",
+    "kind": "external"
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Employment Interest Assessments",
+    "title": "Career One Stop Videos",
+    "description": "Short videos offering snapshots of different jobs in English and Spanish.",
+    "url": "https://www.careeronestop.org/Videos/CareerVideos/career-videos.aspx",
+    "kind": "external"
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Employment Interest Assessments",
+    "title": "T-Folio Career Clusters Survey",
+    "description": "Online interest survey organized around career clusters.",
+    "url": "https://www.cctstfolio.com/#/unit-1/lesson-3/interests-survey",
+    "kind": "external"
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Employment Interest Assessments",
+    "title": "CTE Career Clusters Interest Survey",
+    "description": "Listed in the current toolkit as pending an updated version.",
+    "kind": "note"
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Student Self-Assessments",
+    "title": "Soft Skills",
+    "description": "One-page work-skills evaluation.",
+    "url": "/files/soft-skills-self.pdf",
+    "kind": "file"
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Student Self-Assessments",
+    "title": "Values Scale",
+    "description": "Two-page values activity to help identify what matters most in a job or career.",
+    "url": "/files/Values_Scale.pdf",
+    "kind": "file"
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Student Self-Assessments",
+    "title": "Holland Code Party Groups",
+    "description": "Small-group activity to explore work-interest groupings.",
+    "url": "/files/Holland_Code.pdf",
+    "kind": "file"
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Student Self-Assessments",
+    "title": "Holland Code Quiz",
+    "description": "Quiz that classifies jobs into categories, interest clusters, or work personality environments.",
+    "url": "https://www.roguecc.edu/Counseling/HollandCodes/test.asp",
+    "kind": "external"
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Student Self-Assessments",
+    "title": "T-Folio Work Skills Assessment",
+    "description": "Online work-maturity and work-skills self-assessment.",
+    "url": "https://www.cctstfolio.com/#/unit-1/lesson-6/work-maturity-skills",
+    "kind": "external"
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Assessments for Students with High Support Needs",
+    "title": "Pictorial Interest Inventory",
+    "description": "Interest inventory organized around multiple career fields.",
+    "url": "/files/Pictorial_Interest_Inventory.pdf",
+    "kind": "file",
+    "tags": ["high-support-needs", "visual-supports"]
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Assessments for Students with High Support Needs",
+    "title": "O*NET Interest Profiler, Pictorial Version",
+    "description": "Pictorial assessment with matching score sheet for students who benefit from more visual supports.",
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "Assessment",
+        "url": "/files/ONET.IP60.Assessment.pdf"
+      },
+      {
+        "label": "Score Sheet",
+        "url": "/files/ONET.IP60.StudentName.Date.pdf"
+      }
+    ],
+    "tags": ["high-support-needs", "visual-supports"]
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Assessments for Students with High Support Needs",
+    "title": "Visual Student Survey",
+    "description": "Strength- and interest-based pictorial assessment that also includes independent living and leisure.",
+    "url": "/files/trans-plan-visual-student-survey.pdf",
+    "kind": "file",
+    "tags": ["high-support-needs", "visual-supports"]
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Assessments for Students with High Support Needs",
+    "title": "What Do You Prefer?",
+    "description": "Assesses student preferences around work qualities like environment and social interaction.",
+    "url": "/files/What-do-you-prefer.pdf",
+    "kind": "file",
+    "tags": ["high-support-needs"]
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Assessments for Students with High Support Needs",
+    "title": "Work Environment Preferences",
+    "description": "Assesses student work preferences with some overlap with What Do You Prefer.",
+    "url": "/files/Vocational_EvaluationTools_Work_Environment_Preferences.pdf",
+    "kind": "file",
+    "tags": ["high-support-needs"]
+  },
+  {
+    "domain": "vocational-employment",
+    "group": "Assessments for Students with High Support Needs",
+    "title": "Employment Checklist",
+    "description": "Checklist of prerequisite knowledge and skills for obtaining a job, targeted toward students ages 14-22 with disabilities.",
+    "url": "/files/Employment-Checklist-Booklet.pdf",
+    "kind": "file",
+    "tags": ["high-support-needs"]
+  },
+  {
+    "collection": "community-agencies",
+    "group": "Kansas Community Agencies and Services",
+    "title": "Cottonwood/CDDO (Douglas County)",
+    "description": "Supports individuals with intellectual and developmental disabilities in accessing community services and supports.",
+    "url": "http://www.cddo.cwood.org",
+    "kind": "external"
+  },
+  {
+    "collection": "community-agencies",
+    "group": "Kansas Community Agencies and Services",
+    "title": "Families Together",
+    "description": "Support, information, and training for families of children with disabilities and special healthcare needs.",
+    "url": "https://familiestogetherinc.org/",
+    "kind": "external"
+  },
+  {
+    "collection": "community-agencies",
+    "group": "Kansas Community Agencies and Services",
+    "title": "Home and Community Based Waiver Service Information",
+    "description": "Kansas state information on HCBS programs for individuals with disabilities and older adults.",
+    "url": "https://www.kdads.ks.gov/services-programs/long-term-services-supports/home-and-community-based-services-hcbs-programs",
+    "kind": "external"
+  },
+  {
+    "collection": "community-agencies",
+    "group": "Kansas Community Agencies and Services",
+    "title": "Independence, Inc.",
+    "description": "Services and support to help individuals with disabilities live independently in the community.",
+    "url": "http://www.independenceinc.org/",
+    "kind": "external"
+  },
+  {
+    "collection": "community-agencies",
+    "group": "Kansas Community Agencies and Services",
+    "title": "Kansas Guardianship Program",
+    "description": "Legal guardianship services for adults with disabilities who do not have family or friends able to serve in that role.",
+    "url": "http://www.ksgprog.org/",
+    "kind": "external"
+  },
+  {
+    "collection": "community-agencies",
+    "group": "Kansas Community Agencies and Services",
+    "title": "Ready for Good",
+    "description": "Social enterprise employing individuals with disabilities to create sustainable products.",
+    "url": "https://shopreadyforgood.com",
+    "kind": "external"
+  },
+  {
+    "collection": "community-agencies",
+    "group": "Kansas Community Agencies and Services",
+    "title": "Van Go, Inc.",
+    "description": "Arts-based programming for youth with disabilities and other challenges.",
+    "url": "https://www.van-go.org/",
+    "kind": "external"
+  },
+  {
+    "collection": "community-agencies",
+    "group": "Kansas Community Agencies and Services",
+    "title": "Kansas Vocational Rehabilitation Services",
+    "description": "Employment preparation and vocational rehabilitation services for individuals with disabilities.",
+    "url": "http://www.dcf.ks.gov/services/rs/pages/employment-services.aspx",
+    "kind": "external"
+  },
+  {
+    "collection": "community-agencies",
+    "group": "Other Resources",
+    "title": "CEC Division on Career Development and Transition",
+    "description": "Council for Exceptional Children division focused on career development and transition for students with disabilities.",
+    "url": "https://dcdt.org",
+    "kind": "external"
+  },
+  {
+    "collection": "community-agencies",
+    "group": "Other Resources",
+    "title": "NTACT:C",
+    "description": "Technical assistance and dissemination center focused on transition planning and services for youth with disabilities.",
+    "url": "https://transitionta.org",
+    "kind": "external"
+  },
+  {
+    "collection": "community-agencies",
+    "group": "Other Resources",
+    "title": "The Transition Coalition",
+    "description": "Training and technical assistance organization aimed at improving transition outcomes for youth with disabilities.",
+    "url": "https://transitioncoalition.org",
+    "kind": "external"
+  },
+  {
+    "collection": "community-agencies",
+    "group": "Other Resources",
+    "title": "Zarrow Institute on Transition and Self-Determination",
+    "description": "Institute focused on improving transition outcomes and promoting self-determination.",
+    "url": "https://www.ou.edu/education/centers-and-partnerships/zarrow",
+    "kind": "external"
+  },
+  {
+    "collection": "open-access-resources",
+    "group": "Transition Bell Ringers",
+    "title": "Transition Bell Ringers",
+    "description": "Bell ringers centered around core transition ideas from self-awareness to student participation in the IEP process.",
+    "url": "/files/Transition-bell-work.pdf",
+    "kind": "file"
+  },
+  {
+    "collection": "open-access-resources",
+    "group": "Transition Bell Ringers",
+    "title": "Fundamental Transition Skills",
+    "description": "Bell ringers focused on fundamental transition-related skills.",
+    "url": "/files/fundamental-bell-ringers.pdf",
+    "kind": "file"
+  },
+  {
+    "collection": "open-access-resources",
+    "group": "Transition Bell Ringers",
+    "title": "Functional Transition Skills",
+    "description": "Bell ringers focused on functional transition skills.",
+    "url": "/files/functional-bell-ringers.pdf",
+    "kind": "file"
+  },
+  {
+    "collection": "open-access-resources",
+    "group": "Transition Bell Ringers",
+    "title": "Daily Living/Independent Living",
+    "description": "Bell ringers focused on daily living and independent living topics.",
+    "url": "/files/daily_ind_living_bell_ringers.pdf",
+    "kind": "file"
+  },
+  {
+    "collection": "open-access-resources",
+    "group": "Transition Bell Ringers",
+    "title": "Math Skills for Everyday",
+    "description": "Bell ringers focused on everyday math skills.",
+    "url": "/files/math-bell-ringers.pdf",
+    "kind": "file"
+  },
+  {
+    "collection": "open-access-resources",
+    "group": "Open Access Websites",
+    "title": "Quick Transition Activities",
+    "description": "Lessons with embedded videos, flash cards, and exercises covering a wide range of transition topics.",
+    "url": "https://transitiontn.org/student/quick-activities/",
+    "kind": "external"
+  },
+  {
+    "collection": "open-access-resources",
+    "group": "Open Access Websites",
+    "title": "Families Together Transition to Adulthood",
+    "description": "Kansas-based transition-to-adulthood resource page including overview content, family information, and self-paced modules.",
+    "url": "https://familiestogetherinc.org/transition-to-adulthood-for-students/",
+    "kind": "external"
+  },
+  {
+    "collection": "open-access-resources",
+    "group": "Open Access Websites",
+    "title": "Adulting Made Easy",
+    "description": "Special education transition platform with blogs and resources about housing, employment, finances, and adult life.",
+    "url": "https://www.spedadulting.com/blogs/",
+    "kind": "external"
+  },
+  {
+    "collection": "other-assessment-resources",
+    "group": "Reference Guides",
+    "title": "Quickbook of Transition Assessments",
+    "description": "Collection of transition assessments for students, families, and teachers across transition domains.",
+    "url": "/files/Quickbook_of_Transition_Assessment.pdf",
+    "kind": "file"
+  },
+  {
+    "collection": "other-assessment-resources",
+    "group": "Reference Guides",
+    "title": "Age-Appropriate Transition Assessments and Resources",
+    "description": "Guide to the what, why, and how of transition assessment with additional resource links.",
+    "url": "/files/Age-Appropriate-Assessment-Guide.pdf",
+    "kind": "file"
+  },
+  {
+    "collection": "other-assessment-resources",
+    "group": "Reference Guides",
+    "title": "Transition Assessment Matrix",
+    "description": "Indiana Secondary Transition Resource Center matrix for filtering transition assessments by topic, grade level, language, and support need.",
+    "url": "https://instrc.indiana.edu/transition-resources/transition-matrix.html",
+    "kind": "external"
+  },
+  {
+    "collection": "other-assessment-resources",
+    "group": "Assessment Platforms",
+    "title": "T-Folio",
+    "description": "Online transition assessment and planning platform with activities related to strengths, preferences, needs, career clusters, and work skills.",
+    "url": "https://www.cctstfolio.com/#/",
+    "kind": "external"
+  },
+  {
+    "collection": "self-advocacy-iep-resources",
+    "group": "Student-Led IEPs",
+    "title": "How to Help Students Lead Their IEP Meetings",
+    "description": "Article outlining steps educators can take to support student-led IEP implementation.",
+    "url": "/files/StudentLedIEP.pdf",
+    "kind": "file"
+  },
+  {
+    "collection": "self-advocacy-iep-resources",
+    "group": "ChoiceMaker Self-Determination Curriculum",
+    "title": "ChoiceMaker Self-Determination Assessment",
+    "description": "Assessment used alongside the ChoiceMaker curriculum matrix to identify self-determination needs.",
+    "url": "/files/ChoiceMakerAssessment2016.pdf",
+    "kind": "file"
+  },
+  {
+    "collection": "self-advocacy-iep-resources",
+    "group": "ChoiceMaker Self-Determination Curriculum",
+    "title": "ChoiceMaker Curriculum Matrix",
+    "description": "Guide for using ChoiceMaker self-determination lessons and mapping results to student needs.",
+    "url": "/files/choice-curriculum-matrix.pdf",
+    "kind": "file"
+  },
+  {
+    "collection": "self-advocacy-iep-resources",
+    "group": "ChoiceMaker Self-Determination Curriculum",
+    "title": "Choosing Education Goals",
+    "description": "Description, lesson materials, and reproducibles for the ChoiceMaker education-goals module.",
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "Description",
+        "url": "/files/education-goals-description.pdf"
+      },
+      {
+        "label": "Lessons",
+        "url": "/files/education-goals-lessons.pdf"
+      },
+      {
+        "label": "Reproducibles",
+        "url": "/files/education-goals-worksheets.pdf"
+      }
+    ]
+  },
+  {
+    "collection": "self-advocacy-iep-resources",
+    "group": "ChoiceMaker Self-Determination Curriculum",
+    "title": "Choosing Employment Goals",
+    "description": "Description, lesson materials, and reproducibles for the ChoiceMaker employment-goals module.",
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "Description",
+        "url": "/files/employment-goals-description.pdf"
+      },
+      {
+        "label": "Lessons",
+        "url": "/files/employment-goals-lessons.pdf"
+      },
+      {
+        "label": "Reproducibles",
+        "url": "/files/employment-tracking-sheet.pdf"
+      }
+    ]
+  },
+  {
+    "collection": "self-advocacy-iep-resources",
+    "group": "ChoiceMaker Self-Determination Curriculum",
+    "title": "Choosing Personal Goals",
+    "description": "Description and lesson materials for the ChoiceMaker personal-goals module.",
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "Description",
+        "url": "/files/personal-goals-description.pdf"
+      },
+      {
+        "label": "Lessons",
+        "url": "/files/personal-goals-lessons.pdf"
+      }
+    ]
+  },
+  {
+    "collection": "district-supported-curriculum",
+    "group": "Project Search Pre-Transition Curriculum",
+    "title": "Lessons for Living, Learning, and Working Overview",
+    "description": "Overview of the Project Search pre-transition curriculum and unit structure.",
+    "url": "/files/Introduction-and-Overview_Final.pdf",
+    "kind": "file"
+  },
+  {
+    "collection": "district-supported-curriculum",
+    "group": "Project Search Pre-Transition Curriculum",
+    "title": "Project Search Pre-Transition Curriculum",
+    "description": "Project Search curriculum site for districts with a Project Search program.",
+    "url": "https://projectsearch.us/pre-transition-questionnaire/8-5-pre-curriculum/",
+    "kind": "external"
+  },
+  {
+    "collection": "district-supported-curriculum",
+    "group": "Project Search Pre-Transition Curriculum",
+    "title": "Project Search Curriculum Units",
+    "description": "Unit materials covering daily living, literacy, math, job search, self-advocacy, social communication, soft skills, and technology.",
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "Unit 1",
+        "url": "/files/Unit-1-DailyLivingSkills.pdf"
+      },
+      {
+        "label": "Unit 2",
+        "url": "/files/Unit-2-FunctionalLiteracy.pdf"
+      },
+      {
+        "label": "Unit 3",
+        "url": "/files/Unit-3-FunctionalMath.pdf"
+      },
+      {
+        "label": "Unit 4",
+        "url": "/files/Unit-4-JobSearchProcess.pdf"
+      },
+      {
+        "label": "Unit 5",
+        "url": "/files/Unit-5-Self-Advocacy.pdf"
+      },
+      {
+        "label": "Unit 6",
+        "url": "/files/Unit-6-SocialandCommunicationSkills.pdf"
+      },
+      {
+        "label": "Unit 7",
+        "url": "/files/Unit-7-SoftSkills.pdf"
+      },
+      {
+        "label": "Unit 8",
+        "url": "/files/Unit-8-Technology.pdf"
+      }
+    ]
+  },
+  {
+    "collection": "district-supported-curriculum",
+    "group": "District-Supported Programs",
+    "title": "News to You",
+    "description": "District-supported current-events and literacy curriculum option.",
+    "url": "https://www.n2y.com/news2you/",
+    "kind": "external"
+  },
+  {
+    "collection": "district-supported-curriculum",
+    "group": "District-Supported Programs",
+    "title": "Unique Learning System",
+    "description": "District-supported curriculum platform focused on accessible instruction.",
+    "url": "https://www.n2y.com/unique-learning-system/",
+    "kind": "external"
+  },
+  {
+    "collection": "district-supported-curriculum",
+    "group": "District-Supported Programs",
+    "title": "TeachTown",
+    "description": "District-supported program for differentiated learning and transition-related instruction.",
+    "url": "https://web.teachtown.com/",
+    "kind": "external"
+  }
+]

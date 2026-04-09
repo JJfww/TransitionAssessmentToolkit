@@ -1,0 +1,64 @@
+{{ define "main" }}
+  <section class="hero">
+    <p class="eyebrow">Parallel Hugo Prototype</p>
+    <h1>{{ .Title }}</h1>
+    <p class="lede">{{ .Site.Params.intro }}</p>
+  </section>
+
+  <section class="home-section" id="assessment-domains">
+    <div class="section-heading">
+      <p class="eyebrow">Transition Assessments</p>
+      <h2>Browse by domain</h2>
+    </div>
+    <section class="domain-grid">
+    {{ range sort (where site.RegularPages "Section" "domains") ".Params.weight" }}
+      {{ $page := . }}
+      {{ $domainKey := .Params.domain_key }}
+      {{ $resources := where hugo.Data.resources "domain" $domainKey }}
+      <article class="domain-card">
+        <h2><a href="{{ .RelPermalink }}">{{ with .Params.card_title }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}</a></h2>
+        <p>{{ .Params.description }}</p>
+        <p class="meta">{{ len $resources }} sample resources migrated</p>
+      </article>
+    {{ end }}
+    </section>
+  </section>
+
+  <section class="home-section" id="support-paths">
+    <div class="section-heading">
+      <p class="eyebrow">Cross-Domain Paths</p>
+      <h2>Browse by support need or access style</h2>
+    </div>
+    <section class="domain-grid support-grid">
+      <article class="domain-card featured-card">
+        <h2><a href="{{ "/high-support-needs/" | relURL }}">High Support Needs</a></h2>
+        <p>A single place to browse assessments across domains that are often useful for students with higher support needs.</p>
+        <p class="meta">{{ len (where hugo.Data.resources "tags" "intersect" (slice "high-support-needs")) }} tagged sample resources</p>
+      </article>
+      <article class="domain-card featured-card">
+        <h2><a href="{{ "/visual-supports/" | relURL }}">Visual Supports</a></h2>
+        <p>Cross-domain tools that use visual supports, pictorial formats, or choice-board style access.</p>
+        <p class="meta">{{ len (where hugo.Data.resources "tags" "intersect" (slice "visual-supports")) }} tagged sample resources</p>
+      </article>
+    </section>
+  </section>
+
+  <section class="home-section" id="additional-resources">
+    <div class="section-heading">
+      <p class="eyebrow">Additional Resources</p>
+      <h2>Support and reference tools</h2>
+    </div>
+    <section class="domain-grid resource-grid">
+      {{ range sort (where site.RegularPages "Section" "collections") ".Params.weight" }}
+        {{ $page := . }}
+        {{ $collectionKey := .Params.collection_key }}
+        {{ $resources := where hugo.Data.resources "collection" $collectionKey }}
+        <article class="domain-card">
+          <h2><a href="{{ .RelPermalink }}">{{ with .Params.card_title }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}</a></h2>
+          <p>{{ .Params.description }}</p>
+          <p class="meta">{{ len $resources }} sample resources migrated</p>
+        </article>
+      {{ end }}
+    </section>
+  </section>
+{{ end }}

@@ -1,0 +1,51 @@
+{{ define "main" }}
+  {{ $tagKey := .Params.tag_key }}
+  {{ $resources := where hugo.Data.resources "tags" "intersect" (slice $tagKey) }}
+  <section class="hero compact">
+    <p class="eyebrow">Cross-Domain Collection</p>
+    <h1>{{ .Title }}</h1>
+    <p class="lede">{{ .Params.description }}</p>
+  </section>
+
+  {{ $groups := slice }}
+  {{ range $resources }}
+    {{ if not (in $groups .group) }}
+      {{ $groups = $groups | append .group }}
+    {{ end }}
+  {{ end }}
+
+  {{ range $groups }}
+    {{ $groupName := . }}
+    {{ $groupItems := where $resources "group" $groupName }}
+    <section class="resource-group">
+      <h2>{{ $groupName }}</h2>
+      <div class="resource-list">
+        {{ range $groupItems }}
+          <article class="resource-card">
+            <div class="card-topline">{{ replace (or .domain .collection) "-" " " }}</div>
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+            {{ with .tags }}
+              <div class="tag-row">
+                {{ range . }}
+                  <span class="tag">{{ humanize . }}</span>
+                {{ end }}
+              </div>
+            {{ end }}
+            {{ if eq .kind "bundle" }}
+              <div class="link-row">
+                {{ range .links }}
+                  <a class="resource-link" href="{{ .url }}">{{ .label }}</a>
+                {{ end }}
+              </div>
+            {{ else if eq .kind "note" }}
+              <span class="tag">No link yet</span>
+            {{ else }}
+              <a class="resource-link" href="{{ .url }}">Open resource</a>
+            {{ end }}
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}
