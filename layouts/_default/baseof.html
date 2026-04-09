@@ -13,11 +13,11 @@
       <header class="site-header">
         <a class="brand" href="{{ "/" | relURL }}">Transition Assessment Toolkit</a>
         <nav class="site-nav">
-          <a href="{{ "/" | relURL }}">Home</a>
-          <a href="{{ "/about/" | relURL }}">About</a>
-          <a href='{{ printf "%s#assessment-domains" ("/" | relURL) }}'>Assessments</a>
-          <a href='{{ printf "%s#support-paths" ("/" | relURL) }}'>Support Paths</a>
-          <a href='{{ printf "%s#additional-resources" ("/" | relURL) }}'>Resources</a>
+          <a href="{{ site.Home.RelPermalink }}">Home</a>
+          <a href="{{ "about/" | relURL }}">About</a>
+          <a href='{{ printf "%s#assessment-domains" site.Home.RelPermalink }}'>Assessments</a>
+          <a href='{{ printf "%s#support-paths" site.Home.RelPermalink }}'>Support Paths</a>
+          <a href='{{ printf "%s#additional-resources" site.Home.RelPermalink }}'>Resources</a>
         </nav>
       </header>
       <main>
