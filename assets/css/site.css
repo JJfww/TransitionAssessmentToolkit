@@ -35,9 +35,8 @@ a {
 
 .site-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 16px;
   margin-bottom: 40px;
   padding: 18px 22px;
   border: 1px solid rgba(23, 33, 31, 0.08);
@@ -46,16 +45,11 @@ a {
   box-shadow: var(--shadow);
 }
 
-.brand {
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
 .site-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  justify-content: center;
 }
 
 .site-nav a {
@@ -277,8 +271,7 @@ h1 {
   }
 
   .site-header {
-    align-items: flex-start;
-    flex-direction: column;
+    padding: 16px 18px;
   }
 
   .hero,
