@@ -30,14 +30,19 @@
     </div>
     <section class="domain-grid support-grid">
       <article class="domain-card featured-card">
-        <h2><a href="{{ "/high-support-needs/" | relURL }}">High Support Needs</a></h2>
+        <h2><a href="{{ "high-support-needs/" | absURL }}">High Support Needs</a></h2>
         <p>A single place to browse assessments across domains that are often useful for students with higher support needs.</p>
         <p class="meta">{{ len (where hugo.Data.resources "tags" "intersect" (slice "high-support-needs")) }} resources</p>
       </article>
       <article class="domain-card featured-card">
-        <h2><a href="{{ "/visual-supports/" | relURL }}">Visual Supports</a></h2>
+        <h2><a href="{{ "visual-supports/" | absURL }}">Visual Supports</a></h2>
         <p>Cross-domain tools that use visual supports, pictorial formats, or choice-board style access.</p>
         <p class="meta">{{ len (where hugo.Data.resources "tags" "intersect" (slice "visual-supports")) }} resources</p>
+      </article>
+      <article class="domain-card featured-card">
+        <h2><a href="{{ "spanish-assessments/" | absURL }}">Spanish Assessments</a></h2>
+        <p>Assessments and tools that include Spanish versions for bilingual access and family use.</p>
+        <p class="meta">{{ len (where hugo.Data.resources "tags" "intersect" (slice "spanish-assessments")) }} resources</p>
       </article>
     </section>
   </section>

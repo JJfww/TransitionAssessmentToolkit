@@ -106,7 +106,7 @@
         "url": "/files/Personal_Preference_Indicators_Spanish.pdf"
       }
     ],
-    "tags": ["high-support-needs", "visual-supports"]
+    "tags": ["high-support-needs", "visual-supports", "spanish-assessments"]
   },
   {
     "domain": "parent-surveys",
@@ -320,6 +320,7 @@
     "title": "CTE Career Clusters Interest Survey",
     "description": "Career-cluster interest survey available in English and Spanish.",
     "kind": "bundle",
+    "tags": ["spanish-assessments"],
     "links": [
       {
         "label": "English",
@@ -337,6 +338,7 @@
     "title": "Motivators Career Interest Survey",
     "description": "Career-interest survey focused on student motivators, available in English and Spanish.",
     "kind": "bundle",
+    "tags": ["spanish-assessments"],
     "links": [
       {
         "label": "English",
