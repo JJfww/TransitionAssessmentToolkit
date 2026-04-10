@@ -124,15 +124,6 @@
   },
   {
     "domain": "parent-surveys",
-    "group": "Parent Surveys",
-    "title": "Original Parent Transition Survey",
-    "description": "Survey that helps capture parent voice and can be especially useful alongside student interviews and assessments.",
-    "url": "/files/parent-transition-survey.pdf",
-    "kind": "file",
-    "tags": ["high-support-needs", "middle-school-assessments"]
-  },
-  {
-    "domain": "parent-surveys",
     "group": "Family Cultural Wealth Assessment",
     "title": "Family Cultural Wealth Assessment",
     "description": "Interview protocols focused on identifying family and community strengths, assets, and priorities for future planning.",
@@ -242,8 +233,7 @@
     "title": "T-Folio Strengths Assessment",
     "description": "Online self-reflection activity focused on identifying personal strengths.",
     "url": "https://www.cctstfolio.com/#/unit-1/lesson-1/strengths-assessment",
-    "kind": "external",
-    "tags": ["middle-school-assessments"]
+    "kind": "external"
   },
   {
     "domain": "self-determination",
@@ -252,7 +242,7 @@
     "description": "Online assessment focused on identifying student preferences.",
     "url": "https://www.cctstfolio.com/#/unit-1/lesson-2/preferences-assessment",
     "kind": "external",
-    "tags": ["visual-supports", "middle-school-assessments"]
+    "tags": ["visual-supports"]
   },
   {
     "domain": "self-determination",
@@ -377,8 +367,7 @@
     "title": "Values Scale",
     "description": "Two-page values activity to help identify what matters most in a job or career.",
     "url": "/files/Values_Scale.pdf",
-    "kind": "file",
-    "tags": ["middle-school-assessments"]
+    "kind": "file"
   },
   {
     "domain": "vocational-employment",
@@ -386,8 +375,7 @@
     "title": "T-Folio Work Skills Assessment",
     "description": "Online work-maturity and work-skills self-assessment.",
     "url": "https://www.cctstfolio.com/#/unit-1/lesson-6/work-maturity-skills",
-    "kind": "external",
-    "tags": ["middle-school-assessments"]
+    "kind": "external"
   },
   {
     "domain": "vocational-employment",
