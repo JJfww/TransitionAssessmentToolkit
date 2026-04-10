@@ -1,8 +1,8 @@
 +++
-title = "Open Access Transition Resources"
-card_title = "Open Access Resources"
+title = "Other Transition Resources"
+card_title = "Other Transition Resources"
 type = "collection"
 collection_key = "open-access-resources"
-description = "Free transition bell ringers, quick activities, and curated web resources."
+description = "Transition bell ringers, activity sets, and curated web resources."
 weight = 20
 +++

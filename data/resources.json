@@ -578,26 +578,18 @@
   },
   {
     "collection": "open-access-resources",
-    "group": "Open Access Websites",
+    "group": "Transition Websites",
     "title": "Quick Transition Activities",
-    "description": "Lessons with embedded videos, flash cards, and exercises covering a wide range of transition topics.",
+    "description": "Transition Tennessee resource with lessons, embedded videos, flash cards, and exercises covering a wide range of transition topics.",
     "url": "https://transitiontn.org/student/quick-activities/",
     "kind": "external"
   },
   {
     "collection": "open-access-resources",
-    "group": "Open Access Websites",
+    "group": "Transition Websites",
     "title": "Families Together Transition to Adulthood",
     "description": "Kansas-based transition-to-adulthood resource page including overview content, family information, and self-paced modules.",
     "url": "https://familiestogetherinc.org/transition-to-adulthood-for-students/",
-    "kind": "external"
-  },
-  {
-    "collection": "open-access-resources",
-    "group": "Open Access Websites",
-    "title": "Adulting Made Easy",
-    "description": "Special education transition platform with blogs and resources about housing, employment, finances, and adult life.",
-    "url": "https://www.spedadulting.com/blogs/",
     "kind": "external"
   },
   {
