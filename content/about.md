@@ -13,10 +13,10 @@ It is also a required part of the IEP process under IDEA. Postsecondary goals in
 ## How to use this toolkit
 
 - Browse by domain to find assessments connected to education, independent living, employment, self-determination, and parent input.
-- Use cross-domain pages like `High Support Needs` to find tools that support a particular access or planning need.
+- Use cross-domain pages like **High Support Needs** to find tools that support a particular access or planning need.
 - Read the descriptions before choosing a tool so the assessment matches the student, purpose, and support context.
-- Use the results to inform IEP goals, services, supports, and instructional priorities.
-- Revisit assessment information regularly as students grow and goals change.
+- Use the results to inform IEP goals, transition services, supports, and instructional priorities.
+- Revisit assessment information regularly as students grow and goals change, and reassess yearly or as needed using different tools when a student's needs, priorities, or transition planning questions shift.
 
 ## What is included
 
