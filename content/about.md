@@ -16,7 +16,7 @@ It is also a required part of the IEP process under IDEA. Postsecondary goals in
 - Use cross-domain pages like **High Support Needs** to find tools that support a particular access or planning need.
 - Read the descriptions before choosing a tool so the assessment matches the student, purpose, and support context.
 - Use the results to inform IEP goals, transition services, supports, and instructional priorities.
-- Revisit assessment information regularly as students grow and goals change, and reassess yearly or as needed using different tools when a student's needs, priorities, or transition planning questions shift.
+- Revisit assessment information regularly as students grow and goals change, and reassess yearly or as needed, selecting the same or different tools based on the student, context, and transition planning questions.
 
 ## What is included
 
