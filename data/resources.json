@@ -38,7 +38,8 @@
     "title": "Study Skills Assessment Questionnaire",
     "description": "Student reflection questionnaire covering academic habits and readiness.",
     "url": "/files/Study_Skills_Assessment.pdf",
-    "kind": "file"
+    "kind": "file",
+    "tags": ["middle-school-assessments"]
   },
   {
     "domain": "independent-living-community-access",
@@ -46,7 +47,8 @@
     "title": "Adolescent Autonomy Checklist",
     "description": "Comprehensive home-skills checklist that families can share with teachers to help develop independent living goals.",
     "url": "/files/AdolescentAutonomyChecklist.pdf",
-    "kind": "file"
+    "kind": "file",
+    "tags": ["middle-school-assessments"]
   },
   {
     "domain": "independent-living-community-access",
@@ -54,7 +56,8 @@
     "title": "Community Based Skills Assessment",
     "description": "Criterion- and interview-based assessment of knowledge, skills, and social communication abilities across age ranges.",
     "url": "/files/CommBasedSkillsAssess.pdf",
-    "kind": "file"
+    "kind": "file",
+    "tags": ["middle-school-assessments"]
   },
   {
     "domain": "independent-living-community-access",
@@ -62,7 +65,8 @@
     "title": "Executive Functioning Skills",
     "description": "Assessment with scoring guide, explanations, and goal-setting space across executive-function domains.",
     "url": "/files/Life-Skills-Advocate-Executive-Functioning-Assessment-Fillable.pdf",
-    "kind": "file"
+    "kind": "file",
+    "tags": ["middle-school-assessments"]
   },
   {
     "domain": "independent-living-community-access",
@@ -70,7 +74,8 @@
     "title": "Evaluate Your Reputation",
     "description": "Simple self-evaluation with a 0-1-2 scale and follow-up goal-setting steps.",
     "url": "/files/Evaluate_Your_Reputation.pdf",
-    "kind": "file"
+    "kind": "file",
+    "tags": ["middle-school-assessments"]
   },
   {
     "domain": "independent-living-community-access",
@@ -115,7 +120,7 @@
     "description": "Fillable PDF version that can be downloaded and shared electronically.",
     "url": "/files/ParentTransitionSurvey-Form-fill.pdf",
     "kind": "file",
-    "tags": ["high-support-needs"]
+    "tags": ["high-support-needs", "middle-school-assessments"]
   },
   {
     "domain": "parent-surveys",
@@ -124,7 +129,7 @@
     "description": "Survey that helps capture parent voice and can be especially useful alongside student interviews and assessments.",
     "url": "/files/parent-transition-survey.pdf",
     "kind": "file",
-    "tags": ["high-support-needs"]
+    "tags": ["high-support-needs", "middle-school-assessments"]
   },
   {
     "domain": "parent-surveys",
@@ -153,6 +158,7 @@
     "title": "AIR Self-Determination Scale",
     "description": "Guide plus student, parent, and educator forms for the AIR Self-Determination Scale.",
     "kind": "bundle",
+    "tags": ["middle-school-assessments"],
     "links": [
       {
         "label": "User Guide",
@@ -178,6 +184,7 @@
     "title": "Arc Self-Determination Scale",
     "description": "Procedural guidelines and formal scale materials for the Arc Self-Determination Scale.",
     "kind": "bundle",
+    "tags": ["middle-school-assessments"],
     "links": [
       {
         "label": "Procedural Guidelines",
@@ -195,6 +202,7 @@
     "title": "I'm Determined One-Pager",
     "description": "One-pager implementation guide and blank form from I'm Determined.",
     "kind": "bundle",
+    "tags": ["middle-school-assessments"],
     "links": [
       {
         "label": "Implementation Guide",
@@ -216,7 +224,8 @@
     "title": "Dream Plan Interview",
     "description": "Guided interview to help students identify future goals and priorities.",
     "url": "/files/Dream_Plan_Interview.pdf",
-    "kind": "file"
+    "kind": "file",
+    "tags": ["middle-school-assessments"]
   },
   {
     "domain": "self-determination",
@@ -224,7 +233,8 @@
     "title": "Brief Dream Plan",
     "description": "Fillable planning form for documenting dreams, preferences, and support needs.",
     "url": "/files/Brief_Dream_Plan_PDF_Fillable.pdf",
-    "kind": "file"
+    "kind": "file",
+    "tags": ["middle-school-assessments"]
   },
   {
     "domain": "self-determination",
@@ -232,7 +242,8 @@
     "title": "T-Folio Strengths Assessment",
     "description": "Online self-reflection activity focused on identifying personal strengths.",
     "url": "https://www.cctstfolio.com/#/unit-1/lesson-1/strengths-assessment",
-    "kind": "external"
+    "kind": "external",
+    "tags": ["middle-school-assessments"]
   },
   {
     "domain": "self-determination",
@@ -241,7 +252,7 @@
     "description": "Online assessment focused on identifying student preferences.",
     "url": "https://www.cctstfolio.com/#/unit-1/lesson-2/preferences-assessment",
     "kind": "external",
-    "tags": ["visual-supports"]
+    "tags": ["visual-supports", "middle-school-assessments"]
   },
   {
     "domain": "self-determination",
@@ -250,7 +261,7 @@
     "description": "Online assessment focused on identifying support needs and priorities.",
     "url": "https://www.cctstfolio.com/#/unit-1/lesson-4/needs-assessment",
     "kind": "external",
-    "tags": ["high-support-needs"]
+    "tags": ["high-support-needs", "middle-school-assessments"]
   },
   {
     "domain": "self-determination",
@@ -280,7 +291,7 @@
         "url": "/files/Preferences_Choice_Board.pdf"
       }
     ],
-    "tags": ["visual-supports"]
+    "tags": ["visual-supports", "middle-school-assessments"]
   },
   {
     "domain": "vocational-employment",
@@ -312,7 +323,8 @@
     "title": "Career One Stop Videos",
     "description": "Short videos offering snapshots of different jobs in English and Spanish.",
     "url": "https://www.careeronestop.org/Videos/CareerVideos/career-videos.aspx",
-    "kind": "external"
+    "kind": "external",
+    "tags": ["middle-school-assessments"]
   },
   {
     "domain": "vocational-employment",
@@ -320,7 +332,7 @@
     "title": "CTE Career Clusters Interest Survey",
     "description": "Career-cluster interest survey available in English and Spanish.",
     "kind": "bundle",
-    "tags": ["spanish-assessments"],
+    "tags": ["spanish-assessments", "middle-school-assessments"],
     "links": [
       {
         "label": "English",
@@ -338,7 +350,7 @@
     "title": "Motivators Career Interest Survey",
     "description": "Career-interest survey focused on student motivators, available in English and Spanish.",
     "kind": "bundle",
-    "tags": ["spanish-assessments"],
+    "tags": ["spanish-assessments", "middle-school-assessments"],
     "links": [
       {
         "label": "English",
@@ -356,7 +368,8 @@
     "title": "Soft Skills",
     "description": "One-page work-skills evaluation.",
     "url": "/files/soft-skills-self.pdf",
-    "kind": "file"
+    "kind": "file",
+    "tags": ["middle-school-assessments"]
   },
   {
     "domain": "vocational-employment",
@@ -364,7 +377,8 @@
     "title": "Values Scale",
     "description": "Two-page values activity to help identify what matters most in a job or career.",
     "url": "/files/Values_Scale.pdf",
-    "kind": "file"
+    "kind": "file",
+    "tags": ["middle-school-assessments"]
   },
   {
     "domain": "vocational-employment",
@@ -372,7 +386,8 @@
     "title": "T-Folio Work Skills Assessment",
     "description": "Online work-maturity and work-skills self-assessment.",
     "url": "https://www.cctstfolio.com/#/unit-1/lesson-6/work-maturity-skills",
-    "kind": "external"
+    "kind": "external",
+    "tags": ["middle-school-assessments"]
   },
   {
     "domain": "vocational-employment",
