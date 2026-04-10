@@ -317,17 +317,36 @@
   {
     "domain": "vocational-employment",
     "group": "Employment Interest Assessments",
-    "title": "T-Folio Career Clusters Survey",
-    "description": "Online interest survey organized around career clusters.",
-    "url": "https://www.cctstfolio.com/#/unit-1/lesson-3/interests-survey",
-    "kind": "external"
+    "title": "CTE Career Clusters Interest Survey",
+    "description": "Career-cluster interest survey available in English and Spanish.",
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "English",
+        "url": "/files/Cluster-by-Cluster-Career-Interest-Survey-Fillable.pdf"
+      },
+      {
+        "label": "Spanish",
+        "url": "/files/Spanish-Cluster-by-Cluster-Career-Interest-Survey-Printable.pdf"
+      }
+    ]
   },
   {
     "domain": "vocational-employment",
     "group": "Employment Interest Assessments",
-    "title": "CTE Career Clusters Interest Survey",
-    "description": "Listed in the current toolkit as pending an updated version.",
-    "kind": "note"
+    "title": "Motivators Career Interest Survey",
+    "description": "Career-interest survey focused on student motivators, available in English and Spanish.",
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "English",
+        "url": "/files/Motivators-Career-Interest-Survey-Fillable.pdf"
+      },
+      {
+        "label": "Spanish",
+        "url": "/files/Spanish-Motivators-Career-Interest-Survey-Printable.pdf"
+      }
+    ]
   },
   {
     "domain": "vocational-employment",
