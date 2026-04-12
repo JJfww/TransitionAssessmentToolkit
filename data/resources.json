@@ -17,14 +17,6 @@
   },
   {
     "domain": "education",
-    "group": "College and Test Preparation",
-    "title": "SAT Practice Tests | Khan Academy",
-    "description": "Free full-length SAT practice tests and prep materials.",
-    "url": "https://www.khanacademy.org/test-prep/sat/full-length-sat-1",
-    "kind": "external"
-  },
-  {
-    "domain": "education",
     "group": "Postsecondary Planning",
     "title": "Postsecondary Education and Experience Assessment",
     "description": "Assessment for students considering transition and postsecondary programs for students with intellectual disabilities.",
@@ -38,8 +30,7 @@
     "title": "Study Skills Assessment Questionnaire",
     "description": "Student reflection questionnaire covering academic habits and readiness.",
     "url": "/files/Study_Skills_Assessment.pdf",
-    "kind": "file",
-    "tags": ["middle-school-assessments"]
+    "kind": "file"
   },
   {
     "domain": "independent-living-community-access",
@@ -57,7 +48,7 @@
     "description": "Criterion- and interview-based assessment of knowledge, skills, and social communication abilities across age ranges.",
     "url": "/files/CommBasedSkillsAssess.pdf",
     "kind": "file",
-    "tags": ["middle-school-assessments"]
+    "tags": ["middle-school-assessments", "high-support-needs"]
   },
   {
     "domain": "independent-living-community-access",
@@ -70,21 +61,12 @@
   },
   {
     "domain": "independent-living-community-access",
-    "group": "Independent Living Assessments",
-    "title": "Evaluate Your Reputation",
-    "description": "Simple self-evaluation with a 0-1-2 scale and follow-up goal-setting steps.",
-    "url": "/files/Evaluate_Your_Reputation.pdf",
-    "kind": "file",
-    "tags": ["middle-school-assessments"]
-  },
-  {
-    "domain": "independent-living-community-access",
     "group": "Assessments for Students with High Support Needs",
     "title": "Independent Living Skills (ILS) Checklist",
     "description": "Comprehensive checklist covering independent living skills across multiple grade levels for students with significant support needs.",
     "url": "/files/ILS_Checklist_2018.pdf",
     "kind": "file",
-    "tags": ["high-support-needs"]
+    "tags": ["high-support-needs", "middle-school-assessments"]
   },
   {
     "domain": "independent-living-community-access",
@@ -93,7 +75,7 @@
     "description": "Broad life-skills checklist often useful for students with more significant support needs.",
     "url": "/files/Life_Skills_Checklist.pdf",
     "kind": "file",
-    "tags": ["high-support-needs"]
+    "tags": ["high-support-needs", "middle-school-assessments"]
   },
   {
     "domain": "independent-living-community-access",
@@ -111,12 +93,12 @@
         "url": "/files/Personal_Preference_Indicators_Spanish.pdf"
       }
     ],
-    "tags": ["high-support-needs", "visual-supports", "spanish-assessments"]
+    "tags": ["high-support-needs", "visual-supports", "spanish-assessments", "middle-school-assessments"]
   },
   {
     "domain": "parent-surveys",
     "group": "Parent Surveys",
-    "title": "Updated Parent Transition Survey",
+    "title": "Parent Transition Survey",
     "description": "Fillable PDF version that can be downloaded and shared electronically.",
     "url": "/files/ParentTransitionSurvey-Form-fill.pdf",
     "kind": "file",
@@ -241,8 +223,7 @@
     "title": "T-Folio Preferences Assessment",
     "description": "Online assessment focused on identifying student preferences.",
     "url": "https://www.cctstfolio.com/#/unit-1/lesson-2/preferences-assessment",
-    "kind": "external",
-    "tags": ["visual-supports"]
+    "kind": "external"
   },
   {
     "domain": "self-determination",
@@ -251,7 +232,7 @@
     "description": "Online assessment focused on identifying support needs and priorities.",
     "url": "https://www.cctstfolio.com/#/unit-1/lesson-4/needs-assessment",
     "kind": "external",
-    "tags": ["high-support-needs", "middle-school-assessments"]
+    "tags": ["middle-school-assessments"]
   },
   {
     "domain": "self-determination",
@@ -425,20 +406,11 @@
   {
     "domain": "vocational-employment",
     "group": "Assessments for Students with High Support Needs",
-    "title": "Work Environment Preferences",
-    "description": "Assesses student work preferences with some overlap with What Do You Prefer.",
-    "url": "/files/Vocational_EvaluationTools_Work_Environment_Preferences.pdf",
-    "kind": "file",
-    "tags": ["high-support-needs"]
-  },
-  {
-    "domain": "vocational-employment",
-    "group": "Assessments for Students with High Support Needs",
     "title": "Employment Checklist",
     "description": "Checklist of prerequisite knowledge and skills for obtaining a job, targeted toward students ages 14-22 with disabilities.",
     "url": "/files/Employment-Checklist-Booklet.pdf",
     "kind": "file",
-    "tags": ["high-support-needs"]
+    "tags": ["middle-school-assessments"]
   },
   {
     "collection": "community-agencies",
