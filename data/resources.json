@@ -61,6 +61,23 @@
   },
   {
     "domain": "independent-living-community-access",
+    "group": "Independent Living Assessments",
+    "title": "Life Skills Inventory",
+    "description": "Life-skills inventory available as a printable PDF and as a Google Sheets version. For the sheet, open it and go to File > Make a copy before editing.",
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "/files/Final_Updated_Life_Skills_Inventory.pdf"
+      },
+      {
+        "label": "Google Sheets",
+        "url": "https://docs.google.com/spreadsheets/d/1k4qhV-FqcRygUGxDAmUbf-0LcmWDHZ3MHHdDdF0sW0I/edit?gid=1641727211#gid=1641727211"
+      }
+    ]
+  },
+  {
+    "domain": "independent-living-community-access",
     "group": "Assessments for Students with High Support Needs",
     "title": "Independent Living Skills (ILS) Checklist",
     "description": "Comprehensive checklist covering independent living skills across multiple grade levels for students with significant support needs.",
