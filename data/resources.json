@@ -398,6 +398,10 @@
       {
         "label": "Score Sheet",
         "url": "/files/ONET.IP60.StudentName.Date.pdf"
+      },
+      {
+        "label": "Enter Scores",
+        "url": "https://onetinterestprofiler.org/p/enter_scores"
       }
     ],
     "tags": ["high-support-needs", "visual-supports"]
