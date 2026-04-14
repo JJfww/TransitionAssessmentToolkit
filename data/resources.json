@@ -476,6 +476,14 @@
   {
     "collection": "community-agencies",
     "group": "Kansas Community Agencies and Services",
+    "title": "Kansas Vocational Rehabilitation Services",
+    "description": "Employment preparation and vocational rehabilitation services for individuals with disabilities.",
+    "url": "http://www.dcf.ks.gov/services/rs/pages/employment-services.aspx",
+    "kind": "external"
+  },
+  {
+    "collection": "community-agencies",
+    "group": "Kansas Community Agencies and Services",
     "title": "Ready for Good",
     "description": "Social enterprise employing individuals with disabilities to create sustainable products.",
     "url": "https://shopreadyforgood.com",
@@ -487,14 +495,6 @@
     "title": "Van Go, Inc.",
     "description": "Arts-based programming for youth with disabilities and other challenges.",
     "url": "https://www.van-go.org/",
-    "kind": "external"
-  },
-  {
-    "collection": "community-agencies",
-    "group": "Kansas Community Agencies and Services",
-    "title": "Kansas Vocational Rehabilitation Services",
-    "description": "Employment preparation and vocational rehabilitation services for individuals with disabilities.",
-    "url": "http://www.dcf.ks.gov/services/rs/pages/employment-services.aspx",
     "kind": "external"
   },
   {
