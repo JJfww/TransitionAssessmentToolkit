@@ -191,28 +191,9 @@
     "group": "Self-Determination Scales",
     "title": "KU Self-Determination Inventory Assessments",
     "description": "University of Kansas assessment suite focused on choice making, goal setting, and decision making, with student, parent-teacher, and adult versions.",
+    "tags": ["spanish-assessments", "sign-language-assessments"],
     "kind": "bundle",
     "links": [
-      {
-        "label": "Student Report - English",
-        "url": "https://sdis.ku.edu/public-survey/fe36ac84-8342-4c7d-a553-11ec5ebe9073"
-      },
-      {
-        "label": "Student Report - Spanish",
-        "url": "https://sdis.ku.edu/public-survey/244cdf43-0d85-4327-8bc2-679618e016d3"
-      },
-      {
-        "label": "Student Report - American Sign Language",
-        "url": "https://sdis.ku.edu/public-survey/f55306cd-55f4-4064-a862-d771b3c7b361"
-      },
-      {
-        "label": "Parent Teacher Report",
-        "url": "https://sdis.ku.edu/public-survey/a0cb9ea5-5026-4205-84ae-a6d0924fc28d"
-      },
-      {
-        "label": "Adult Report",
-        "url": "https://sdis.ku.edu/public-survey/88dddc60-4127-4497-9183-c2eb65d14118"
-      },
       {
         "label": "KU Assessments Overview",
         "url": "https://selfdetermination.ku.edu/sdlc/assessments/"
