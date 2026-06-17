@@ -1,6 +1,8 @@
 {{ define "main" }}
   {{ $tagPages := sort (where site.RegularPages "Type" "tag-collection") ".Params.weight" }}
   {{ $allResources := hugo.Data.resources }}
+  {{ $parentSurveysPage := site.GetPage "/domains/parent-surveys" }}
+  {{ $openAccessPage := site.GetPage "/collections/open-access-resources" }}
   <section class="hero">
     <h1>{{ .Title }}</h1>
     <p class="lede">{{ .Site.Params.intro }}</p>
@@ -47,12 +49,12 @@
         <p class="meta">Best when access needs matter more than the domain.</p>
       </article>
       <article class="domain-card goal-card">
-        <h2><a href="{{ "/domains/parent-surveys/" | relURL }}">Find family and parent tools</a></h2>
+        <h2><a href="{{ $parentSurveysPage.RelPermalink }}">Find family and parent tools</a></h2>
         <p>Open the parent-focused assessment set for family voice, interviews, and culturally responsive input.</p>
         <p class="meta">Best when you need family perspective to inform planning.</p>
       </article>
       <article class="domain-card goal-card">
-        <h2><a href="{{ "/collections/open-access-resources/" | relURL }}">Find open-access and printable resources</a></h2>
+        <h2><a href="{{ $openAccessPage.RelPermalink }}">Find open-access and printable resources</a></h2>
         <p>Open the curated collection of printable activities, bell ringers, and freely accessible transition tools.</p>
         <p class="meta">Best when you need something you can use right away.</p>
       </article>

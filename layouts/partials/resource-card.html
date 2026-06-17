@@ -108,7 +108,7 @@
       {{ range $resource.links }}
         {{ $href := .url }}
         {{ if hasPrefix $href "/" }}
-          {{ $href = $href | relURL }}
+          {{ $href = strings.TrimPrefix "/" $href | absURL }}
         {{ end }}
         <a class="resource-link" href="{{ $href }}">{{ .label }}</a>
       {{ end }}
@@ -118,7 +118,7 @@
   {{ else }}
     {{ $href := $resource.url }}
     {{ if hasPrefix $href "/" }}
-      {{ $href = $href | relURL }}
+      {{ $href = strings.TrimPrefix "/" $href | absURL }}
     {{ end }}
     <div class="link-row">
       <a class="resource-link" href="{{ $href }}">Open resource</a>
