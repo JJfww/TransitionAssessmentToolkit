@@ -27,6 +27,8 @@ It is also a required part of the IEP process under IDEA. Postsecondary goals in
 
 ## Updates and Contact
 
+This toolkit was created by Jennifer Burnes, PhD, a Transition Specialist in Lawrence, Kansas, who serves students in an 18-21 transition program. It reflects her belief that student-centered transition planning starts with meaningful transition assessment, and it was built to make practical, high-quality assessment tools easier for teams to find and use.
+
 This is intended to be a living resource. Items may be added, updated, reorganized, or removed over time as better tools become available.
 
 For feedback, additions, or corrections, contact [Jennifer Burnes](mailto:jennifer.burnes@usd497.org).

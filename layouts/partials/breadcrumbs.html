@@ -1,0 +1,17 @@
+{{ $items := . }}
+{{ if gt (len $items) 0 }}
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="{{ site.Home.RelPermalink }}">Home</a></li>
+      {{ range $index, $item := $items }}
+        <li>
+          {{ if $item.url }}
+            <a href="{{ $item.url }}">{{ $item.label }}</a>
+          {{ else }}
+            <span aria-current="page">{{ $item.label }}</span>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ol>
+  </nav>
+{{ end }}

@@ -1,58 +1,14 @@
 {{ define "main" }}
   {{ $collectionKey := .Params.collection_key }}
   {{ $resources := where hugo.Data.resources "collection" $collectionKey }}
+  {{ partial "breadcrumbs.html" (slice
+    (dict "label" "Additional Resources" "url" (printf "%s#additional-resources" site.Home.RelPermalink))
+    (dict "label" .Title)
+  ) }}
   <section class="hero compact">
     <p class="eyebrow">Collection</p>
     <h1>{{ .Title }}</h1>
     <p class="lede">{{ .Params.description }}</p>
   </section>
-
-  {{ $groups := slice }}
-  {{ range $resources }}
-    {{ if not (in $groups .group) }}
-      {{ $groups = $groups | append .group }}
-    {{ end }}
-  {{ end }}
-
-  {{ range $groups }}
-    {{ $groupName := . }}
-    {{ $groupItems := where $resources "group" $groupName }}
-    <section class="resource-group">
-      <h2>{{ $groupName }}</h2>
-      <div class="resource-list">
-        {{ range $groupItems }}
-          <article class="resource-card">
-            <h3>{{ .title }}</h3>
-            <p>{{ .description }}</p>
-            {{ with .tags }}
-              <div class="tag-row">
-                {{ range . }}
-                  <span class="tag">{{ humanize . }}</span>
-                {{ end }}
-              </div>
-            {{ end }}
-            {{ if eq .kind "bundle" }}
-              <div class="link-row">
-                {{ range .links }}
-                  {{ $href := .url }}
-                  {{ if hasPrefix $href "/" }}
-                    {{ $href = strings.TrimPrefix "/" $href | absURL }}
-                  {{ end }}
-                  <a class="resource-link" href="{{ $href }}">{{ .label }}</a>
-                {{ end }}
-              </div>
-            {{ else if eq .kind "note" }}
-              <span class="tag">No link yet</span>
-            {{ else }}
-              {{ $href := .url }}
-              {{ if hasPrefix $href "/" }}
-                {{ $href = strings.TrimPrefix "/" $href | absURL }}
-              {{ end }}
-              <a class="resource-link" href="{{ $href }}">Open resource</a>
-            {{ end }}
-          </article>
-        {{ end }}
-      </div>
-    </section>
-  {{ end }}
+  {{ partial "resource-browser.html" (dict "resources" $resources) }}
 {{ end }}

@@ -6,20 +6,33 @@
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     {{ $styles := resources.Get "css/site.css" | resources.Minify }}
+    {{ $script := resources.Get "js/site.js" | resources.Minify }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    <script src="{{ $script.RelPermalink }}" defer></script>
   </head>
   <body>
+    {{ $navSection := "home" }}
+    {{ if eq .Type "about" }}
+      {{ $navSection = "about" }}
+    {{ else if eq .Type "domains" }}
+      {{ $navSection = "assessments" }}
+    {{ else if eq .Type "tag-collection" }}
+      {{ $navSection = "support-paths" }}
+    {{ else if eq .Type "collection" }}
+      {{ $navSection = "resources" }}
+    {{ end }}
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="page-shell">
       <header class="site-header">
         <nav class="site-nav">
-          <a href="{{ site.Home.RelPermalink }}">Home</a>
-          <a href="{{ "about/" | relURL }}">About</a>
-          <a href='{{ printf "%s#assessment-domains" site.Home.RelPermalink }}'>Assessments</a>
-          <a href='{{ printf "%s#support-paths" site.Home.RelPermalink }}'>Support Paths</a>
-          <a href='{{ printf "%s#additional-resources" site.Home.RelPermalink }}'>Resources</a>
+          <a href="{{ site.Home.RelPermalink }}"{{ if eq $navSection "home" }} class="is-current" aria-current="page"{{ end }}>Home</a>
+          <a href="{{ "about/" | relURL }}"{{ if eq $navSection "about" }} class="is-current" aria-current="page"{{ end }}>About</a>
+          <a href='{{ printf "%s#assessment-domains" site.Home.RelPermalink }}'{{ if eq $navSection "assessments" }} class="is-current" aria-current="page"{{ end }}>Assessments</a>
+          <a href='{{ printf "%s#support-paths" site.Home.RelPermalink }}'{{ if eq $navSection "support-paths" }} class="is-current" aria-current="page"{{ end }}>Support Paths</a>
+          <a href='{{ printf "%s#additional-resources" site.Home.RelPermalink }}'{{ if eq $navSection "resources" }} class="is-current" aria-current="page"{{ end }}>Resources</a>
         </nav>
       </header>
-      <main>
+      <main id="main-content">
         {{ block "main" . }}{{ end }}
       </main>
     </div>

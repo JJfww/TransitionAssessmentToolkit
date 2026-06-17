@@ -1,7 +1,91 @@
 {{ define "main" }}
+  {{ $tagPages := sort (where site.RegularPages "Type" "tag-collection") ".Params.weight" }}
+  {{ $allResources := hugo.Data.resources }}
   <section class="hero">
     <h1>{{ .Title }}</h1>
     <p class="lede">{{ .Site.Params.intro }}</p>
+  </section>
+
+  <section class="home-section" aria-labelledby="how-to-use-heading">
+    <div class="section-heading">
+      <p class="eyebrow">Start Here</p>
+      <h2 id="how-to-use-heading">How to use this toolkit</h2>
+    </div>
+    <div class="steps-grid">
+      <article class="step-card">
+        <span class="step-number">1</span>
+        <h3>Pick the question you need to answer.</h3>
+        <p>Start with a domain, student support need, or resource type that matches your planning goal.</p>
+      </article>
+      <article class="step-card">
+        <span class="step-number">2</span>
+        <h3>Scan the cards before you open a tool.</h3>
+        <p>Descriptions, tags, and format badges help you narrow quickly without opening every file.</p>
+      </article>
+      <article class="step-card">
+        <span class="step-number">3</span>
+        <h3>Choose the best fit for this student.</h3>
+        <p>Use results to guide IEP goals, planning conversations, supports, and next assessment steps.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="home-section" aria-labelledby="start-by-goal-heading">
+    <div class="section-heading">
+      <p class="eyebrow">Quick Paths</p>
+      <h2 id="start-by-goal-heading">Start by goal</h2>
+    </div>
+    <section class="domain-grid goal-grid">
+      <article class="domain-card goal-card">
+        <h2><a href="#assessment-domains">Browse by domain</a></h2>
+        <p>Go straight to employment, education, independent living, self-determination, or parent input.</p>
+        <p class="meta">Best when you already know the adult-life area you are planning for.</p>
+      </article>
+      <article class="domain-card goal-card">
+        <h2><a href="#support-paths">Browse by student need</a></h2>
+        <p>Use cross-domain pathways for visual supports, Spanish access, high support needs, and more.</p>
+        <p class="meta">Best when access needs matter more than the domain.</p>
+      </article>
+      <article class="domain-card goal-card">
+        <h2><a href="{{ "/domains/parent-surveys/" | relURL }}">Find family and parent tools</a></h2>
+        <p>Open the parent-focused assessment set for family voice, interviews, and culturally responsive input.</p>
+        <p class="meta">Best when you need family perspective to inform planning.</p>
+      </article>
+      <article class="domain-card goal-card">
+        <h2><a href="{{ "/collections/open-access-resources/" | relURL }}">Find open-access and printable resources</a></h2>
+        <p>Open the curated collection of printable activities, bell ringers, and freely accessible transition tools.</p>
+        <p class="meta">Best when you need something you can use right away.</p>
+      </article>
+    </section>
+  </section>
+
+  <section class="home-section" aria-labelledby="quick-find-heading">
+    <div class="section-heading">
+      <p class="eyebrow">Quick Find</p>
+      <h2 id="quick-find-heading">Search across the toolkit</h2>
+    </div>
+    <form class="quick-find-panel" data-home-search>
+      <label class="search-label" for="resource-search">Find a resource by title, description, tag, group, domain, or collection</label>
+      <div class="search-input-row">
+        <input id="resource-search" name="resource-search" type="search" placeholder="Try: visual supports, parent survey, employment, Spanish">
+      </div>
+      <p class="search-help">Start typing to search the current toolkit without leaving the page.</p>
+
+      <section class="search-results" data-search-results hidden aria-live="polite">
+        <div class="search-results-header">
+          <p class="results-summary" data-search-summary>0 results</p>
+        </div>
+        <div class="resource-list search-results-list">
+          {{ range $allResources }}
+            {{ partial "resource-card.html" (dict "resource" . "showSource" true) }}
+          {{ end }}
+        </div>
+        <div class="empty-state" data-search-empty hidden>
+          <h3>No matching resources found.</h3>
+          <p>Try a broader topic, a tag like “middle school assessments,” or a resource group such as “Parent Surveys.”</p>
+        </div>
+      </section>
+    </form>
   </section>
 
   <section class="home-section" id="assessment-domains">
@@ -29,31 +113,15 @@
       <h2>Browse by support need or access style</h2>
     </div>
     <section class="domain-grid support-grid">
-      <article class="domain-card featured-card">
-        <h2><a href="{{ "high-support-needs/" | absURL }}">High Support Needs</a></h2>
-        <p>A single place to browse assessments across domains that are often useful for students with higher support needs.</p>
-        <p class="meta">{{ len (where hugo.Data.resources "tags" "intersect" (slice "high-support-needs")) }} resources</p>
-      </article>
-      <article class="domain-card featured-card">
-        <h2><a href="{{ "visual-supports/" | absURL }}">Visual Supports</a></h2>
-        <p>Cross-domain tools that use visual supports, pictorial formats, or choice-board style access.</p>
-        <p class="meta">{{ len (where hugo.Data.resources "tags" "intersect" (slice "visual-supports")) }} resources</p>
-      </article>
-      <article class="domain-card featured-card">
-        <h2><a href="{{ "spanish-assessments/" | absURL }}">Spanish Assessments</a></h2>
-        <p>Assessments and tools that include Spanish versions for bilingual access and family use.</p>
-        <p class="meta">{{ len (where hugo.Data.resources "tags" "intersect" (slice "spanish-assessments")) }} resources</p>
-      </article>
-      <article class="domain-card featured-card">
-        <h2><a href="{{ "middle-school-assessments/" | absURL }}">Middle School Assessments</a></h2>
-        <p>Cross-domain tools that are often useful for early transition awareness, reflection, and planning in middle school.</p>
-        <p class="meta">{{ len (where hugo.Data.resources "tags" "intersect" (slice "middle-school-assessments")) }} resources</p>
-      </article>
-      <article class="domain-card featured-card">
-        <h2><a href="{{ "whole-student-planning/" | absURL }}">Whole Student Planning</a></h2>
-        <p>Planning tools that help teams look across domains and build a more complete picture of the student.</p>
-        <p class="meta">{{ len (where hugo.Data.resources "tags" "intersect" (slice "whole-student-planning")) }} resources</p>
-      </article>
+      {{ range $tagPages }}
+        {{ $tagKey := .Params.tag_key }}
+        {{ $resources := where hugo.Data.resources "tags" "intersect" (slice $tagKey) }}
+        <article class="domain-card featured-card">
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <p>{{ .Params.description }}</p>
+          <p class="meta">{{ len $resources }} resources</p>
+        </article>
+      {{ end }}
     </section>
   </section>
 

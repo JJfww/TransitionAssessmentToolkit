@@ -1,0 +1,123 @@
+{{ $resources := .resources }}
+{{ $showSource := .showSource | default false }}
+
+{{ $groups := slice }}
+{{ $tagFilters := slice }}
+{{ $formatFilters := slice }}
+
+{{ range $resources }}
+  {{ if not (in $groups .group) }}
+    {{ $groups = $groups | append .group }}
+  {{ end }}
+
+  {{ range .tags }}
+    {{ if not (in $tagFilters .) }}
+      {{ $tagFilters = $tagFilters | append . }}
+    {{ end }}
+  {{ end }}
+
+  {{ if eq .kind "bundle" }}
+    {{ if not (in $formatFilters "multi-file") }}
+      {{ $formatFilters = $formatFilters | append "multi-file" }}
+    {{ end }}
+    {{ range .links }}
+      {{ if and (hasPrefix .url "/") (strings.HasSuffix (lower .url) ".pdf") }}
+        {{ if not (in $formatFilters "pdf") }}
+          {{ $formatFilters = $formatFilters | append "pdf" }}
+        {{ end }}
+      {{ else if or (hasPrefix .url "http://") (hasPrefix .url "https://") }}
+        {{ if not (in $formatFilters "website") }}
+          {{ $formatFilters = $formatFilters | append "website" }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ else if and (hasPrefix .url "/") (strings.HasSuffix (lower .url) ".pdf") }}
+    {{ if not (in $formatFilters "pdf") }}
+      {{ $formatFilters = $formatFilters | append "pdf" }}
+    {{ end }}
+  {{ else if or (hasPrefix .url "http://") (hasPrefix .url "https://") }}
+    {{ if not (in $formatFilters "website") }}
+      {{ $formatFilters = $formatFilters | append "website" }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<section class="browser-tools" data-resource-browser>
+  <div class="browser-tools-header">
+    <p class="results-summary">
+      <span data-visible-count>{{ len $resources }}</span> of {{ len $resources }} resources shown
+    </p>
+    {{ if gt (len $groups) 2 }}
+      <nav class="jump-links" aria-label="Jump to resource groups">
+        <span class="jump-links-label">Jump to section</span>
+        <div class="jump-links-row">
+          {{ range $groups }}
+            <a href="#{{ anchorize . }}">{{ . }}</a>
+          {{ end }}
+        </div>
+      </nav>
+    {{ end }}
+  </div>
+
+  {{ if or (gt (len $tagFilters) 0) (gt (len $formatFilters) 0) }}
+    <form class="filter-panel" data-filter-form>
+      {{ if gt (len $tagFilters) 0 }}
+        <fieldset>
+          <legend>Filter by support tag</legend>
+          <div class="filter-chip-row">
+            {{ range sort $tagFilters }}
+              <label class="filter-chip">
+                <input type="checkbox" value="{{ . }}" data-filter-group="tag">
+                <span>{{ humanize . }}</span>
+              </label>
+            {{ end }}
+          </div>
+        </fieldset>
+      {{ end }}
+
+      {{ if gt (len $formatFilters) 0 }}
+        <fieldset>
+          <legend>Filter by format</legend>
+          <div class="filter-chip-row">
+            {{ range sort $formatFilters }}
+              <label class="filter-chip">
+                <input type="checkbox" value="{{ . }}" data-filter-group="format">
+                <span>
+                  {{ if eq . "pdf" }}
+                    PDF
+                  {{ else if eq . "multi-file" }}
+                    Multi-file
+                  {{ else if eq . "website" }}
+                    Website
+                  {{ else }}
+                    {{ humanize . }}
+                  {{ end }}
+                </span>
+              </label>
+            {{ end }}
+          </div>
+        </fieldset>
+      {{ end }}
+
+      <button class="filter-reset" type="button" data-clear-filters>Clear filters</button>
+    </form>
+  {{ end }}
+
+  <div class="empty-state" data-browser-empty hidden>
+    <h2>No resources match these filters.</h2>
+    <p>Clear one or more filters to bring matching tools back into view.</p>
+  </div>
+
+  {{ range $groups }}
+    {{ $groupName := . }}
+    {{ $groupItems := where $resources "group" $groupName }}
+    <section class="resource-group" id="{{ anchorize $groupName }}" data-resource-group>
+      <h2>{{ $groupName }}</h2>
+      <div class="resource-list">
+        {{ range $groupItems }}
+          {{ partial "resource-card.html" (dict "resource" . "showSource" $showSource) }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+</section>
