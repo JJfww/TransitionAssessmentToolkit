@@ -5,6 +5,10 @@ function splitDatasetValues(value) {
     .filter(Boolean);
 }
 
+function normalizeSearch(value) {
+  return value.toLowerCase().normalize("NFKD").replace(/\p{M}/gu, "").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+}
+
 function setupHomeSearch() {
   document.querySelectorAll("[data-home-search]").forEach((searchRoot) => {
     const input = searchRoot.querySelector("input[type='search']");
@@ -17,16 +21,17 @@ function setupHomeSearch() {
       return;
     }
 
+    const searchText = new Map(cards.map((card) => [card, normalizeSearch(card.dataset.search || "")]));
     const updateSearch = () => {
-      const query = input.value.trim().toLowerCase();
+      const words = normalizeSearch(input.value).split(/\s+/).filter(Boolean);
 
-      if (!query) {
+      if (!words.length) {
         results.hidden = true;
         cards.forEach((card) => {
           card.hidden = false;
         });
         empty.hidden = true;
-        summary.textContent = "0 results";
+        summary.textContent = "";
         return;
       }
 
@@ -34,7 +39,7 @@ function setupHomeSearch() {
       results.hidden = false;
 
       cards.forEach((card) => {
-        const matches = (card.dataset.search || "").includes(query);
+        const matches = words.every((word) => searchText.get(card).includes(word));
         card.hidden = !matches;
         if (matches) {
           visibleCount += 1;
@@ -45,8 +50,33 @@ function setupHomeSearch() {
       empty.hidden = visibleCount !== 0;
     };
 
-    input.addEventListener("input", updateSearch);
-    input.addEventListener("search", updateSearch);
+    const saveSearch = () => {
+      const url = new URL(window.location.href);
+      if (input.value.trim()) {
+        url.searchParams.set("resource-search", input.value.trim());
+      } else {
+        url.searchParams.delete("resource-search");
+      }
+      window.history.replaceState(null, "", url);
+    };
+    const restoreSearch = () => {
+      input.value = new URLSearchParams(window.location.search).get("resource-search") || "";
+      updateSearch();
+    };
+    const handleSearch = () => {
+      updateSearch();
+      saveSearch();
+    };
+
+    searchRoot.addEventListener("submit", (event) => {
+      event.preventDefault();
+      handleSearch();
+    });
+    input.addEventListener("input", handleSearch);
+    input.addEventListener("search", handleSearch);
+    window.addEventListener("popstate", restoreSearch);
+    window.addEventListener("pageshow", restoreSearch);
+    restoreSearch();
   });
 }
 
@@ -58,6 +88,8 @@ function setupResourceBrowsers() {
     const clearButton = browser.querySelector("[data-clear-filters]");
     const count = browser.querySelector("[data-visible-count]");
     const empty = browser.querySelector("[data-browser-empty]");
+    const jumpLinks = browser.querySelector(".jump-links");
+    const groupLinks = Array.from(browser.querySelectorAll("[data-group-target]"));
 
     if (!cards.length || !count || !empty) {
       return;
@@ -90,6 +122,14 @@ function setupResourceBrowsers() {
         const visibleCards = Array.from(group.querySelectorAll("[data-resource-card]")).some((card) => !card.hidden);
         group.hidden = !visibleCards;
       });
+
+      groupLinks.forEach((link) => {
+        const group = groups.find((item) => item.id === link.dataset.groupTarget);
+        link.hidden = !group || group.hidden;
+      });
+      if (jumpLinks) {
+        jumpLinks.hidden = !groupLinks.some((link) => !link.hidden);
+      }
 
       count.textContent = String(visibleCount);
       empty.hidden = visibleCount !== 0;

@@ -16,35 +16,35 @@
     {{ end }}
   {{ end }}
 
-  {{ if eq .kind "bundle" }}
-    {{ if not (in $formatFilters "multi-file") }}
-      {{ $formatFilters = $formatFilters | append "multi-file" }}
-    {{ end }}
-    {{ range .links }}
-      {{ if and (hasPrefix .url "/") (strings.HasSuffix (lower .url) ".pdf") }}
-        {{ if not (in $formatFilters "pdf") }}
-          {{ $formatFilters = $formatFilters | append "pdf" }}
-        {{ end }}
-      {{ else if or (hasPrefix .url "http://") (hasPrefix .url "https://") }}
-        {{ if not (in $formatFilters "website") }}
-          {{ $formatFilters = $formatFilters | append "website" }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-  {{ else if and (hasPrefix .url "/") (strings.HasSuffix (lower .url) ".pdf") }}
-    {{ if not (in $formatFilters "pdf") }}
-      {{ $formatFilters = $formatFilters | append "pdf" }}
-    {{ end }}
-  {{ else if or (hasPrefix .url "http://") (hasPrefix .url "https://") }}
-    {{ if not (in $formatFilters "website") }}
-      {{ $formatFilters = $formatFilters | append "website" }}
+  {{ range (partial "resource-formats.html" .) }}
+    {{ if not (in $formatFilters .) }}
+      {{ $formatFilters = $formatFilters | append . }}
     {{ end }}
   {{ end }}
 {{ end }}
 
+{{/* Only offer filters that can actually narrow this resource set. */}}
+{{ $usefulTags := slice }}
+{{ range $tagFilters }}
+  {{ if lt (len (where $resources "tags" "intersect" (slice .))) (len $resources) }}
+    {{ $usefulTags = $usefulTags | append . }}
+  {{ end }}
+{{ end }}
+{{ $tagFilters = $usefulTags }}
+{{ $usefulFormats := slice }}
+{{ range $formatFilters }}
+  {{ $format := . }}
+  {{ $count := 0 }}
+  {{ range $resources }}
+    {{ if in (partial "resource-formats.html" .) $format }}{{ $count = add $count 1 }}{{ end }}
+  {{ end }}
+  {{ if lt $count (len $resources) }}{{ $usefulFormats = $usefulFormats | append $format }}{{ end }}
+{{ end }}
+{{ $formatFilters = $usefulFormats }}
+
 <section class="browser-tools" data-resource-browser>
   <div class="browser-tools-header">
-    <p class="results-summary">
+    <p class="results-summary" role="status" aria-atomic="true">
       <span data-visible-count>{{ len $resources }}</span> of {{ len $resources }} resources shown
     </p>
     {{ if gt (len $groups) 2 }}
@@ -52,7 +52,7 @@
         <span class="jump-links-label">Jump to section</span>
         <div class="jump-links-row">
           {{ range $groups }}
-            <a href="#{{ anchorize . }}">{{ . }}</a>
+            <a href="#{{ anchorize . }}" data-group-target="{{ anchorize . }}">{{ . }}</a>
           {{ end }}
         </div>
       </nav>
@@ -64,6 +64,7 @@
       {{ if gt (len $tagFilters) 0 }}
         <fieldset>
           <legend>Filter by support tag</legend>
+          <p class="filter-help">Select one or more; resources may match any selected tag.</p>
           <div class="filter-chip-row">
             {{ range sort $tagFilters }}
               <label class="filter-chip">
@@ -86,7 +87,7 @@
                   {{ if eq . "pdf" }}
                     PDF
                   {{ else if eq . "multi-file" }}
-                    Multi-file
+                    Multiple links
                   {{ else if eq . "website" }}
                     Website
                   {{ else }}

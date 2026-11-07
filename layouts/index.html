@@ -8,11 +8,64 @@
     <p class="lede">{{ .Site.Params.intro }}</p>
   </section>
 
-  <section class="home-section" aria-labelledby="how-to-use-heading">
+  <section class="home-section" aria-labelledby="quick-find-heading" id="quick-find">
     <div class="section-heading">
-      <p class="eyebrow">Start Here</p>
-      <h2 id="how-to-use-heading">How to use this toolkit</h2>
+      <p class="eyebrow">Quick Find</p>
+      <h2 id="quick-find-heading">Search across the toolkit</h2>
     </div>
+    <form class="quick-find-panel" role="search" data-home-search>
+      <label class="search-label" for="resource-search">Find a resource by title, description, tag, group, domain, or collection</label>
+      <div class="search-input-row">
+        <input id="resource-search" name="resource-search" type="search" placeholder="Try: visual supports, parent survey, employment, Spanish">
+      </div>
+      <p class="search-help">Start typing to search the current toolkit without leaving the page.</p>
+
+      <p class="results-summary search-status" data-search-summary role="status" aria-atomic="true"></p>
+      <section class="search-results" data-search-results hidden>
+        <div class="resource-list search-results-list">
+          {{ range $allResources }}
+            {{ partial "resource-card.html" (dict "resource" . "showSource" true) }}
+          {{ end }}
+        </div>
+        <div class="empty-state" data-search-empty hidden>
+          <h3>No matching resources found.</h3>
+          <p>Try a broader topic, a tag like “middle school assessments,” or a resource group such as “Parent Surveys.”</p>
+        </div>
+      </section>
+    </form>
+  </section>
+
+  <section class="home-section" aria-labelledby="start-by-goal-heading">
+    <div class="section-heading">
+      <p class="eyebrow">Quick Paths</p>
+      <h2 id="start-by-goal-heading">Start by goal</h2>
+    </div>
+    <section class="domain-grid goal-grid">
+      <article class="domain-card goal-card">
+        <h3><a href="#assessment-domains">Browse by domain</a></h3>
+        <p>Go straight to employment, education, independent living, self-determination, or parent input.</p>
+        <p class="meta">Best when you already know the adult-life area you are planning for.</p>
+      </article>
+      <article class="domain-card goal-card">
+        <h3><a href="#support-paths">Browse by student need</a></h3>
+        <p>Use cross-domain pathways for visual supports, Spanish access, high support needs, and more.</p>
+        <p class="meta">Best when access needs matter more than the domain.</p>
+      </article>
+      <article class="domain-card goal-card">
+        <h3><a href="{{ $parentSurveysPage.RelPermalink }}">Find family and parent tools</a></h3>
+        <p>Open the parent-focused assessment set for family voice, interviews, and culturally responsive input.</p>
+        <p class="meta">Best when you need family perspective to inform planning.</p>
+      </article>
+      <article class="domain-card goal-card">
+        <h3><a href="{{ $openAccessPage.RelPermalink }}">Find open-access and printable resources</a></h3>
+        <p>Open the curated collection of printable activities, bell ringers, and freely accessible transition tools.</p>
+        <p class="meta">Best when you need something you can use right away.</p>
+      </article>
+    </section>
+  </section>
+
+  <details class="home-section toolkit-guide">
+    <summary>How to use this toolkit</summary>
     <div class="steps-grid">
       <article class="step-card">
         <span class="step-number">1</span>
@@ -30,65 +83,7 @@
         <p>Use results to guide IEP goals, planning conversations, supports, and next assessment steps.</p>
       </article>
     </div>
-  </section>
-
-  <section class="home-section" aria-labelledby="start-by-goal-heading">
-    <div class="section-heading">
-      <p class="eyebrow">Quick Paths</p>
-      <h2 id="start-by-goal-heading">Start by goal</h2>
-    </div>
-    <section class="domain-grid goal-grid">
-      <article class="domain-card goal-card">
-        <h2><a href="#assessment-domains">Browse by domain</a></h2>
-        <p>Go straight to employment, education, independent living, self-determination, or parent input.</p>
-        <p class="meta">Best when you already know the adult-life area you are planning for.</p>
-      </article>
-      <article class="domain-card goal-card">
-        <h2><a href="#support-paths">Browse by student need</a></h2>
-        <p>Use cross-domain pathways for visual supports, Spanish access, high support needs, and more.</p>
-        <p class="meta">Best when access needs matter more than the domain.</p>
-      </article>
-      <article class="domain-card goal-card">
-        <h2><a href="{{ $parentSurveysPage.RelPermalink }}">Find family and parent tools</a></h2>
-        <p>Open the parent-focused assessment set for family voice, interviews, and culturally responsive input.</p>
-        <p class="meta">Best when you need family perspective to inform planning.</p>
-      </article>
-      <article class="domain-card goal-card">
-        <h2><a href="{{ $openAccessPage.RelPermalink }}">Find open-access and printable resources</a></h2>
-        <p>Open the curated collection of printable activities, bell ringers, and freely accessible transition tools.</p>
-        <p class="meta">Best when you need something you can use right away.</p>
-      </article>
-    </section>
-  </section>
-
-  <section class="home-section" aria-labelledby="quick-find-heading">
-    <div class="section-heading">
-      <p class="eyebrow">Quick Find</p>
-      <h2 id="quick-find-heading">Search across the toolkit</h2>
-    </div>
-    <form class="quick-find-panel" data-home-search>
-      <label class="search-label" for="resource-search">Find a resource by title, description, tag, group, domain, or collection</label>
-      <div class="search-input-row">
-        <input id="resource-search" name="resource-search" type="search" placeholder="Try: visual supports, parent survey, employment, Spanish">
-      </div>
-      <p class="search-help">Start typing to search the current toolkit without leaving the page.</p>
-
-      <section class="search-results" data-search-results hidden aria-live="polite">
-        <div class="search-results-header">
-          <p class="results-summary" data-search-summary>0 results</p>
-        </div>
-        <div class="resource-list search-results-list">
-          {{ range $allResources }}
-            {{ partial "resource-card.html" (dict "resource" . "showSource" true) }}
-          {{ end }}
-        </div>
-        <div class="empty-state" data-search-empty hidden>
-          <h3>No matching resources found.</h3>
-          <p>Try a broader topic, a tag like “middle school assessments,” or a resource group such as “Parent Surveys.”</p>
-        </div>
-      </section>
-    </form>
-  </section>
+  </details>
 
   <section class="home-section" id="assessment-domains">
     <div class="section-heading">
@@ -101,7 +96,7 @@
       {{ $domainKey := .Params.domain_key }}
       {{ $resources := where hugo.Data.resources "domain" $domainKey }}
       <article class="domain-card">
-        <h2><a href="{{ .RelPermalink }}">{{ with .Params.card_title }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}</a></h2>
+        <h3><a href="{{ .RelPermalink }}">{{ with .Params.card_title }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}</a></h3>
         <p>{{ .Params.description }}</p>
         <p class="meta">{{ len $resources }} assessments</p>
       </article>
@@ -119,9 +114,9 @@
         {{ $tagKey := .Params.tag_key }}
         {{ $resources := where hugo.Data.resources "tags" "intersect" (slice $tagKey) }}
         <article class="domain-card featured-card">
-          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           <p>{{ .Params.description }}</p>
-          <p class="meta">{{ len $resources }} resources</p>
+          <p class="meta">{{ len $resources }} {{ if eq (len $resources) 1 }}resource{{ else }}resources{{ end }}</p>
         </article>
       {{ end }}
     </section>
@@ -138,9 +133,9 @@
         {{ $collectionKey := .Params.collection_key }}
         {{ $resources := where hugo.Data.resources "collection" $collectionKey }}
         <article class="domain-card">
-          <h2><a href="{{ .RelPermalink }}">{{ with .Params.card_title }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}</a></h2>
+          <h3><a href="{{ .RelPermalink }}">{{ with .Params.card_title }}{{ . }}{{ else }}{{ $page.Title }}{{ end }}</a></h3>
           <p>{{ .Params.description }}</p>
-          <p class="meta">{{ len $resources }} resources</p>
+          <p class="meta">{{ len $resources }} {{ if eq (len $resources) 1 }}resource{{ else }}resources{{ end }}</p>
         </article>
       {{ end }}
     </section>

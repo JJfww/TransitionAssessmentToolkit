@@ -7,7 +7,7 @@
   ) }}
   <section class="hero compact">
     <p class="eyebrow">Domain</p>
-    <h1>{{ .Title }}</h1>
+    <h1>{{ range $index, $part := split .Title "/" }}{{ if $index }}/<wbr>{{ end }}{{ $part }}{{ end }}</h1>
     <p class="lede">{{ .Params.description }}</p>
   </section>
   {{ partial "resource-browser.html" (dict "resources" $resources) }}

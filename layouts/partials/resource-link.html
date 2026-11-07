@@ -1,0 +1,25 @@
+{{- $href := .url -}}
+{{- $path := (urls.Parse $href).Path -}}
+{{- $isPDF := strings.HasSuffix (lower $path) ".pdf" -}}
+{{- $detail := "Website" -}}
+{{- $sizeLabel := "" -}}
+{{- $label := .label | default "Visit website" -}}
+{{- if $isPDF -}}
+  {{- $detail = "PDF" -}}
+  {{- if not .label -}}{{- $label = "Open PDF" -}}{{- end -}}
+  {{- if hasPrefix $href "/" -}}
+    {{- $file := printf "static%s" $path -}}
+    {{- if os.FileExists $file -}}
+      {{- $size := (os.Stat $file).Size -}}
+      {{- $sizeLabel = printf "%.1f MB" (div (float $size) 1000000) -}}
+      {{- if lt $size 1000000 -}}{{- $sizeLabel = printf "%.0f KB" (math.Ceil (div (float $size) 1000)) -}}{{- end -}}
+      {{- $detail = printf "PDF · %s" $sizeLabel -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if hasPrefix $href "/" -}}{{- $href = strings.TrimPrefix "/" $href | absURL -}}{{- end -}}
+<a class="resource-link" href="{{ $href }}">
+  <span>{{ $label }}<span class="sr-only"> — {{ .title }}</span></span>
+  {{- if .label -}}<span class="resource-link-detail">{{ $detail }}</span>
+  {{- else if $sizeLabel -}}<span class="resource-link-detail">{{ $sizeLabel }}</span>{{- end -}}
+</a>

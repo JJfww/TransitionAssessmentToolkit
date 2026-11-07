@@ -445,7 +445,7 @@
     "description": "Checklist of prerequisite knowledge and skills for obtaining a job, targeted toward students ages 14-22 with disabilities.",
     "url": "/files/Employment-Checklist-Booklet.pdf",
     "kind": "file",
-    "tags": ["middle-school-assessments"]
+    "tags": ["high-support-needs", "middle-school-assessments"]
   },
   {
     "collection": "community-agencies",
@@ -540,7 +540,7 @@
     "group": "Other Resources",
     "title": "Zarrow Institute on Transition and Self-Determination",
     "description": "Institute focused on improving transition outcomes and promoting self-determination.",
-    "url": "https://www.ou.edu/education/centers-and-partnerships/zarrow",
+    "url": "https://ou.edu/education/zarrow",
     "kind": "external"
   },
   {
@@ -608,7 +608,7 @@
     "links": [
       {
         "label": "Overview",
-        "url": "https://selfdetermination.ku.edu/research-resources/supported-decision-making/"
+        "url": "https://kucd.ku.edu/sites/kucdd/files/documents/MTMC_Files/Supported%20Decision%20Making.pdf"
       },
       {
         "label": "What is Supported Decision-Making?",

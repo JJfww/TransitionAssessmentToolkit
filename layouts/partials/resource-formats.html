@@ -1,0 +1,19 @@
+{{- $formats := slice -}}
+{{- $links := slice -}}
+{{- if eq .kind "bundle" -}}
+  {{- $links = .links -}}
+  {{- if gt (len $links) 1 -}}
+    {{- $formats = $formats | append "multi-file" -}}
+  {{- end -}}
+{{- else -}}
+  {{- with .url -}}{{- $links = slice (dict "url" .) -}}{{- end -}}
+{{- end -}}
+{{- range $links -}}
+  {{- $path := (urls.Parse .url).Path -}}
+  {{- if strings.HasSuffix (lower $path) ".pdf" -}}
+    {{- $formats = $formats | append "pdf" -}}
+  {{- else if or (hasPrefix .url "https://") (hasPrefix .url "http://") -}}
+    {{- $formats = $formats | append "website" -}}
+  {{- end -}}
+{{- end -}}
+{{- return (uniq $formats) -}}

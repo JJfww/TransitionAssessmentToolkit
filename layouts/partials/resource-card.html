@@ -21,30 +21,7 @@
   {{ end }}
 {{ end }}
 
-{{ $formats := slice }}
-{{ if eq $resource.kind "bundle" }}
-  {{ $formats = $formats | append "multi-file" }}
-  {{ range $resource.links }}
-    {{ $linkURL := .url }}
-    {{ if hasPrefix $linkURL "/" }}
-      {{ if strings.HasSuffix (lower $linkURL) ".pdf" }}
-        {{ if not (in $formats "pdf") }}
-          {{ $formats = $formats | append "pdf" }}
-        {{ end }}
-      {{ end }}
-    {{ else if or (hasPrefix $linkURL "http://") (hasPrefix $linkURL "https://") }}
-      {{ if not (in $formats "website") }}
-        {{ $formats = $formats | append "website" }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-{{ else if hasPrefix $resource.url "/" }}
-  {{ if strings.HasSuffix (lower $resource.url) ".pdf" }}
-    {{ $formats = $formats | append "pdf" }}
-  {{ end }}
-{{ else if or (hasPrefix $resource.url "http://") (hasPrefix $resource.url "https://") }}
-  {{ $formats = $formats | append "website" }}
-{{ end }}
+{{ $formats := partial "resource-formats.html" $resource }}
 
 {{ $searchText := lower (printf "%s %s %s %s %s %s %s" $resource.title $resource.description $resource.group $sourceLabel (delimit $tags " ") (delimit $humanizedTags " ") (delimit $formats " ")) }}
 
@@ -68,9 +45,9 @@
   <div class="resource-card-header">
     <h3>{{ $resource.title }}</h3>
 
-    {{ with $tags }}
-      <div class="tag-row card-tag-row">
-        {{ range . }}
+    {{ if or (gt (len $tags) 0) (gt (len $formats) 0) }}
+      <div class="resource-metadata">
+        {{ range $tags }}
           {{ $tagMatches := where site.RegularPages "Params.tag_key" . }}
           {{ if gt (len $tagMatches) 0 }}
             <a class="tag tag-link" href="{{ (index $tagMatches 0).RelPermalink }}">{{ humanize . }}</a>
@@ -78,22 +55,12 @@
             <span class="tag">{{ humanize . }}</span>
           {{ end }}
         {{ end }}
-      </div>
-    {{ end }}
-
-    {{ if gt (len $formats) 0 }}
-      <div class="badge-row" aria-label="Resource metadata">
         {{ range $formats }}
           <span class="meta-badge">
-            {{ if eq . "pdf" }}
-              PDF
-            {{ else if eq . "multi-file" }}
-              Multi-file
-            {{ else if eq . "website" }}
-              Website
-            {{ else }}
-              {{ humanize . }}
-            {{ end }}
+            {{- if eq . "pdf" -}}PDF
+            {{- else if eq . "multi-file" -}}{{ len $resource.links }} links
+            {{- else if eq . "website" -}}Website
+            {{- else -}}{{ humanize . }}{{- end -}}
           </span>
         {{ end }}
       </div>
@@ -103,25 +70,16 @@
   <p>{{ $resource.description }}</p>
 
   {{ if eq $resource.kind "bundle" }}
-    <p class="resource-supporting-copy">{{ len $resource.links }} linked files and tools</p>
     <div class="link-row">
       {{ range $resource.links }}
-        {{ $href := .url }}
-        {{ if hasPrefix $href "/" }}
-          {{ $href = strings.TrimPrefix "/" $href | absURL }}
-        {{ end }}
-        <a class="resource-link" href="{{ $href }}">{{ .label }}</a>
+        {{ partial "resource-link.html" (dict "url" .url "label" .label "title" $resource.title) }}
       {{ end }}
     </div>
   {{ else if eq $resource.kind "note" }}
     <span class="meta-badge meta-badge-muted">No link yet</span>
   {{ else }}
-    {{ $href := $resource.url }}
-    {{ if hasPrefix $href "/" }}
-      {{ $href = strings.TrimPrefix "/" $href | absURL }}
-    {{ end }}
     <div class="link-row">
-      <a class="resource-link" href="{{ $href }}">Open resource</a>
+      {{ partial "resource-link.html" (dict "url" $resource.url "title" $resource.title) }}
     </div>
   {{ end }}
 </article>
