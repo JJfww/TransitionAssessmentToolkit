@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    {{ $styles := resources.Get "css/site.css" | resources.Minify }}
-    {{ $script := resources.Get "js/site.js" | resources.Minify }}
+    {{ $styles := resources.Get "css/site.css" | resources.Minify | resources.Fingerprint }}
+    {{ $script := resources.Get "js/site.js" | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     <script src="{{ $script.RelPermalink }}" defer></script>
   </head>
@@ -24,7 +24,8 @@
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="page-shell">
       <header class="site-header">
-        <nav class="site-nav">
+        <a class="site-brand" href="{{ site.Home.RelPermalink }}" aria-label="{{ .Site.Title }} home">{{ .Site.Title }}</a>
+        <nav class="site-nav" aria-label="Main navigation">
           <a href="{{ site.Home.RelPermalink }}"{{ if eq $navSection "home" }} class="is-current" aria-current="page"{{ end }}>Home</a>
           <a href="{{ "about/" | relURL }}"{{ if eq $navSection "about" }} class="is-current" aria-current="page"{{ end }}>About</a>
           <a href='{{ printf "%s#assessment-domains" site.Home.RelPermalink }}'{{ if eq $navSection "assessments" }} class="is-current" aria-current="page"{{ end }}>Assessments</a>
@@ -32,9 +33,17 @@
           <a href='{{ printf "%s#additional-resources" site.Home.RelPermalink }}'{{ if eq $navSection "resources" }} class="is-current" aria-current="page"{{ end }}>Resources</a>
         </nav>
       </header>
-      <main id="main-content">
+      <main id="main-content" tabindex="-1">
         {{ block "main" . }}{{ end }}
       </main>
+      <footer class="site-footer">
+        <p>Created by Jennifer Burnes, PhD</p>
+        <nav aria-label="Footer navigation">
+          <a href="{{ "about/" | relURL }}">About the toolkit</a>
+          <a href='{{ printf "%s#how-to-use" site.Home.RelPermalink }}'>How to use it</a>
+          <a href="mailto:jennifer.burnes@usd497.org">Contact</a>
+        </nav>
+      </footer>
     </div>
   </body>
 </html>

@@ -42,83 +42,93 @@
 {{ end }}
 {{ $formatFilters = $usefulFormats }}
 
-<section class="browser-tools" data-resource-browser>
-  <div class="browser-tools-header">
-    <p class="results-summary" role="status" aria-atomic="true">
-      <span data-visible-count>{{ len $resources }}</span> of {{ len $resources }} resources shown
-    </p>
-    {{ if gt (len $groups) 2 }}
-      <nav class="jump-links" aria-label="Jump to resource groups">
-        <span class="jump-links-label">Jump to section</span>
-        <div class="jump-links-row">
-          {{ range $groups }}
-            <a href="#{{ anchorize . }}" data-group-target="{{ anchorize . }}">{{ . }}</a>
+{{ $hasFilters := or (gt (len $tagFilters) 0) (gt (len $formatFilters) 0) }}
+{{ $hasGroups := gt (len $groups) 2 }}
+{{ $hasSidebar := or $hasFilters $hasGroups }}
+<section class="browser-tools{{ if $hasSidebar }} has-sidebar{{ end }}" data-resource-browser>
+  {{ if $hasSidebar }}
+    <aside class="browser-sidebar" aria-label="Resource navigation and filters">
+      <details class="filter-disclosure" data-filter-disclosure open>
+        <summary>{{ if $hasFilters }}Filters{{ else }}Sections{{ end }}<span data-active-filter-count></span></summary>
+        {{ if $hasFilters }}
+          <form class="filter-panel" data-filter-form>
+            {{ if gt (len $tagFilters) 0 }}
+              <fieldset>
+                <legend>Filter by support tag</legend>
+                <p class="filter-help">Select one or more; resources may match any selected tag.</p>
+                <div class="filter-chip-row">
+                  {{ range sort $tagFilters }}
+                    <label class="filter-chip">
+                      <input type="checkbox" value="{{ . }}" data-filter-group="tag">
+                      <span>{{ humanize . }}</span>
+                    </label>
+                  {{ end }}
+                </div>
+              </fieldset>
+            {{ end }}
+
+            {{ if gt (len $formatFilters) 0 }}
+              <fieldset>
+                <legend>Filter by format</legend>
+                <div class="filter-chip-row">
+                  {{ range sort $formatFilters }}
+                    <label class="filter-chip">
+                      <input type="checkbox" value="{{ . }}" data-filter-group="format">
+                      <span>
+                        {{ if eq . "pdf" }}
+                          PDF
+                        {{ else if eq . "multi-file" }}
+                          Multiple links
+                        {{ else if eq . "website" }}
+                          Website
+                        {{ else }}
+                          {{ humanize . }}
+                        {{ end }}
+                      </span>
+                    </label>
+                  {{ end }}
+                </div>
+              </fieldset>
+            {{ end }}
+
+            <button class="filter-reset" type="button" data-clear-filters>Clear filters</button>
+          </form>
+        {{ end }}
+        {{ if $hasGroups }}
+          <nav class="jump-links" aria-label="Jump to resource groups">
+            <span class="jump-links-label">Jump to section</span>
+            <div class="jump-links-row">
+              {{ range $groups }}
+                <a href="#{{ anchorize . }}" data-group-target="{{ anchorize . }}">{{ . }}</a>
+              {{ end }}
+            </div>
+          </nav>
+        {{ end }}
+      </details>
+    </aside>
+  {{ end }}
+  <div class="browser-results">
+    <div class="browser-tools-header">
+      <p class="results-summary" role="status" aria-atomic="true">
+        <span data-visible-count>{{ len $resources }}</span> of {{ len $resources }} resources shown
+      </p>
+    </div>
+    <div class="empty-state" data-browser-empty hidden>
+      <h2>No resources match these filters.</h2>
+      <p>Clear one or more filters to bring matching tools back into view.</p>
+    </div>
+
+    {{ range $groups }}
+      {{ $groupName := . }}
+      {{ $groupItems := where $resources "group" $groupName }}
+      <section class="resource-group" id="{{ anchorize $groupName }}" data-resource-group>
+        <h2>{{ $groupName }}</h2>
+        <div class="resource-list">
+          {{ range $groupItems }}
+            {{ partial "resource-card.html" (dict "resource" . "showSource" $showSource) }}
           {{ end }}
         </div>
-      </nav>
+      </section>
     {{ end }}
   </div>
-
-  {{ if or (gt (len $tagFilters) 0) (gt (len $formatFilters) 0) }}
-    <form class="filter-panel" data-filter-form>
-      {{ if gt (len $tagFilters) 0 }}
-        <fieldset>
-          <legend>Filter by support tag</legend>
-          <p class="filter-help">Select one or more; resources may match any selected tag.</p>
-          <div class="filter-chip-row">
-            {{ range sort $tagFilters }}
-              <label class="filter-chip">
-                <input type="checkbox" value="{{ . }}" data-filter-group="tag">
-                <span>{{ humanize . }}</span>
-              </label>
-            {{ end }}
-          </div>
-        </fieldset>
-      {{ end }}
-
-      {{ if gt (len $formatFilters) 0 }}
-        <fieldset>
-          <legend>Filter by format</legend>
-          <div class="filter-chip-row">
-            {{ range sort $formatFilters }}
-              <label class="filter-chip">
-                <input type="checkbox" value="{{ . }}" data-filter-group="format">
-                <span>
-                  {{ if eq . "pdf" }}
-                    PDF
-                  {{ else if eq . "multi-file" }}
-                    Multiple links
-                  {{ else if eq . "website" }}
-                    Website
-                  {{ else }}
-                    {{ humanize . }}
-                  {{ end }}
-                </span>
-              </label>
-            {{ end }}
-          </div>
-        </fieldset>
-      {{ end }}
-
-      <button class="filter-reset" type="button" data-clear-filters>Clear filters</button>
-    </form>
-  {{ end }}
-
-  <div class="empty-state" data-browser-empty hidden>
-    <h2>No resources match these filters.</h2>
-    <p>Clear one or more filters to bring matching tools back into view.</p>
-  </div>
-
-  {{ range $groups }}
-    {{ $groupName := . }}
-    {{ $groupItems := where $resources "group" $groupName }}
-    <section class="resource-group" id="{{ anchorize $groupName }}" data-resource-group>
-      <h2>{{ $groupName }}</h2>
-      <div class="resource-list">
-        {{ range $groupItems }}
-          {{ partial "resource-card.html" (dict "resource" . "showSource" $showSource) }}
-        {{ end }}
-      </div>
-    </section>
-  {{ end }}
 </section>

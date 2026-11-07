@@ -90,6 +90,21 @@ function setupResourceBrowsers() {
     const empty = browser.querySelector("[data-browser-empty]");
     const jumpLinks = browser.querySelector(".jump-links");
     const groupLinks = Array.from(browser.querySelectorAll("[data-group-target]"));
+    const disclosure = browser.querySelector("[data-filter-disclosure]");
+    const activeCount = browser.querySelector("[data-active-filter-count]");
+
+    if (disclosure) {
+      const desktop = window.matchMedia("(min-width: 960px)");
+      const updateDisclosure = () => {
+        if (desktop.matches || disclosure.contains(document.activeElement)) {
+          disclosure.open = true;
+        } else {
+          disclosure.open = false;
+        }
+      };
+      desktop.addEventListener("change", updateDisclosure);
+      updateDisclosure();
+    }
 
     if (!cards.length || !count || !empty) {
       return;
@@ -133,6 +148,11 @@ function setupResourceBrowsers() {
 
       count.textContent = String(visibleCount);
       empty.hidden = visibleCount !== 0;
+
+      if (activeCount) {
+        const selectedCount = checkboxes.filter((input) => input.checked).length;
+        activeCount.textContent = selectedCount ? ` (${selectedCount} selected)` : "";
+      }
 
       if (clearButton) {
         clearButton.disabled = !checkboxes.some((input) => input.checked);

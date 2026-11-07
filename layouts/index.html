@@ -33,57 +33,14 @@
         </div>
       </section>
     </form>
+    <nav class="quick-paths" aria-label="Quick paths">
+      <span>Quick paths</span>
+      <a href="#assessment-domains">By domain</a>
+      <a href="#support-paths">By student need</a>
+      <a href="{{ $parentSurveysPage.RelPermalink }}">Family and parent tools</a>
+      <a href="{{ $openAccessPage.RelPermalink }}">Printable resources</a>
+    </nav>
   </section>
-
-  <section class="home-section" aria-labelledby="start-by-goal-heading">
-    <div class="section-heading">
-      <p class="eyebrow">Quick Paths</p>
-      <h2 id="start-by-goal-heading">Start by goal</h2>
-    </div>
-    <section class="domain-grid goal-grid">
-      <article class="domain-card goal-card">
-        <h3><a href="#assessment-domains">Browse by domain</a></h3>
-        <p>Go straight to employment, education, independent living, self-determination, or parent input.</p>
-        <p class="meta">Best when you already know the adult-life area you are planning for.</p>
-      </article>
-      <article class="domain-card goal-card">
-        <h3><a href="#support-paths">Browse by student need</a></h3>
-        <p>Use cross-domain pathways for visual supports, Spanish access, high support needs, and more.</p>
-        <p class="meta">Best when access needs matter more than the domain.</p>
-      </article>
-      <article class="domain-card goal-card">
-        <h3><a href="{{ $parentSurveysPage.RelPermalink }}">Find family and parent tools</a></h3>
-        <p>Open the parent-focused assessment set for family voice, interviews, and culturally responsive input.</p>
-        <p class="meta">Best when you need family perspective to inform planning.</p>
-      </article>
-      <article class="domain-card goal-card">
-        <h3><a href="{{ $openAccessPage.RelPermalink }}">Find open-access and printable resources</a></h3>
-        <p>Open the curated collection of printable activities, bell ringers, and freely accessible transition tools.</p>
-        <p class="meta">Best when you need something you can use right away.</p>
-      </article>
-    </section>
-  </section>
-
-  <details class="home-section toolkit-guide">
-    <summary>How to use this toolkit</summary>
-    <div class="steps-grid">
-      <article class="step-card">
-        <span class="step-number">1</span>
-        <h3>Pick the question you need to answer.</h3>
-        <p>Start with a domain, student support need, or resource type that matches your planning goal.</p>
-      </article>
-      <article class="step-card">
-        <span class="step-number">2</span>
-        <h3>Scan the cards before you open a tool.</h3>
-        <p>Descriptions, tags, and format badges help you narrow quickly without opening every file.</p>
-      </article>
-      <article class="step-card">
-        <span class="step-number">3</span>
-        <h3>Choose the best fit for this student.</h3>
-        <p>Use results to guide IEP goals, planning conversations, supports, and next assessment steps.</p>
-      </article>
-    </div>
-  </details>
 
   <section class="home-section" id="assessment-domains">
     <div class="section-heading">
@@ -140,4 +97,25 @@
       {{ end }}
     </section>
   </section>
+  <details class="home-section toolkit-guide" id="how-to-use">
+    <summary>How to use this toolkit</summary>
+    <div class="steps-grid">
+      <article class="step-card">
+        <span class="step-number">1</span>
+        <h3>Pick the question you need to answer.</h3>
+        <p>Start with a domain, student support need, or resource type that matches your planning goal.</p>
+      </article>
+      <article class="step-card">
+        <span class="step-number">2</span>
+        <h3>Scan the cards before you open a tool.</h3>
+        <p>Descriptions, tags, and format badges help you narrow quickly without opening every file.</p>
+      </article>
+      <article class="step-card">
+        <span class="step-number">3</span>
+        <h3>Choose the best fit for this student.</h3>
+        <p>Use results to guide IEP goals, planning conversations, supports, and next assessment steps.</p>
+      </article>
+    </div>
+  </details>
+
 {{ end }}
