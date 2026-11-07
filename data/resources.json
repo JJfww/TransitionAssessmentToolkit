@@ -674,6 +674,24 @@
   },
   {
     "collection": "self-advocacy-iep-resources",
+    "group": "Student-Led IEPs",
+    "title": "My Future Portfolio",
+    "description": "Student portfolio tool for sharing strengths, interests, preferences, experiences, and future goals through writing, images, audio, and video. Supports student participation and leadership in IEP meetings. Contact the creator to arrange access.",
+    "tags": ["whole-student-planning"],
+    "kind": "bundle",
+    "links": [
+      {
+        "label": "Overview",
+        "url": "https://myfutureportfolio.com/"
+      },
+      {
+        "label": "Try the demo",
+        "url": "https://myfutureportfolio.com/demo"
+      }
+    ]
+  },
+  {
+    "collection": "self-advocacy-iep-resources",
     "group": "ChoiceMaker Self-Determination Curriculum",
     "title": "ChoiceMaker Self-Determination Assessment",
     "description": "Assessment used alongside the ChoiceMaker curriculum matrix to identify self-determination needs.",
